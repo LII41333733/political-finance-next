@@ -1,209 +1,82 @@
 import Head from 'next/head'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import JumbotronHomepage from '../components/jumbotrons/jumbotronHomepage';
+import HomepageCarousel from '../components/homepageCarousel';
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+// export async function getStaticProps() {
+//   const allPostsData = getSortedPostsData()
+//   return {
+//     props: {
+//       allPostsData
+//     }
+//   }
+// }
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+export default () =>
+  <>
+    <JumbotronHomepage />
+    <Container style={{ marginBottom: "50px" }}>
+      <Row className="mt-5">
+        <Col
+          lg={7}
+          className="my-auto">
+          <p
+            style={{ marginTop: "20px", marginRight: "-5px" }}
+            className="textBlock"
+          ><span className="dropcap">W</span>
+                            ith the fallout of 2008 and now in {new Date().getFullYear()}, the current structure of the financial system under scrutiny by people the world over, scores of books, documentaries, and videos were produced to explain what happened and what our future holds. Specifically, in the United States, inflation and debt, the profits of which are reaped at the highest concentrated levels, are in question. But in order to understand the complexity of the 21<sup>st</sup>-century political economy, the domestic divisions, and the possible outcomes, like any study, it must be done at the beginning, and at the elementary level.</p>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
+        </Col>
+        <Col lg={5} className="mt-n3">
+          <HomepageCarousel />
+        </Col>
+      </Row>
+      <Row className="mt-1">
+        <Col>
+          <p
+            className="textBlock"
+            style={{ marginTop: "10px" }}>Parts I and II of <em>The Art of Political Finance</em> confront economic philosophy touching on the differences, similarities, and conflicts between Thomas Jefferson and Alexander Hamilton, Andrew Jackson and Nicholas Biddle, and to the lesser-known ideas of Peter Cooper that often opposed financial officiating by John Sherman and his colleagues. As “capitalism” and wealth were used to apologize for transgressions against the natural laws of supply and demand and humanity, the people of the United States ceded not only to the potential of prosperity but to the peace that goes along with it. The books also analyze root causes and patterns in the commercial and banking arenas known as panics and depressions. These events, which are euphemized as business cycles, greatly affect the human experience and still require a resilient population to absorb.</p>
+        </Col>
+      </Row>
+      <hr className="hr0" />
+      <hr className="hr1" />
+      <Row>
+        <Col className="my-auto">
+          <h2 className="author">About the Author</h2>
+          <p className="textBlock mt-2"><span className="dropcap">B</span><strong>ill Pacello</strong> was born in 1963 and grew up in the 1970s in the small town of Audubon, New Jersey. Bill
+                        graduated from Audubon High School in 1981 and received his Bachelor of Arts degree in business from
+                        Rutgers University in 1986. While attending both of those institutions, he spent a significant amount of his
+                        energy on the baseball field toward a well-rounded life and achieved area and state honors.</p>
+          <p className="textBlock">After working in the waste, construction, and electronics industries, Bill returned to Rowan University in 1993
+          where he received a public school teaching certification. During his post-baccalaureate study, he began to
+          develop computer skills and found work in the information technology department at a chemical company in
+          Philadelphia. There he began learning the SAP enterprise system and soon embarked on a consulting career
+          at IBM. After a few years of travel and settling in at one of its service delivery centers, his assignment and his
+          time at IBM had run its course. Although treated well, the life behind a computer all day in a cubicle, office, or
+          boiler room with no natural light began to weigh on his soul and his psyche. So, in 2005, faced with the
+          prospect of being on an airplane every week for a second stint, he left IBM for a new life as an entrepreneur
+          trying to capitalize on the motorcycle, tattoo, and t-shirt embellishment trend. The irony was that he had to
+          leave one of the most esteemed companies in the information industry that offered many opportunities within
+          the IT sphere to explore an untapped part of his brain. But creativity and business experience was not enough
+          to compete with low international labor rates and distribution channels leveraged by the highly capitalized retail
+                        giants in the 21<sup>st</sup>-century “go big or go home” commercial arena.</p>
+          <p className="textBlock">These experiences, along with Pacello’s non-political affiliation and effort to adhere to the Christian faith, have
+          fueled a perspective that will cut into both sides of the mainstream narrative. His first two books, The Art of
+          Political Finance Part I and II, show the unfolding and proliferation of fiat currency and debt in early America
+          and how it began to undermine individual freedom, liberty, national independence, and spirit, prior to the
+          establishment of the Federal Reserve. The research and analysis provide an alternative for readers and young
+          Americans so that they may better understand the 21<sup>st</sup>-century bazaar, especially in an America with ratcheted
+          discord after events like 911 and the “Great Recession” where each generation seems to be more apt to
+consumption and predation than the former.</p>
           <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
-}
+            target={"_blank"}
+            href="#">
+            <Button
+              className="m-2 w-50 buyButton inline">Encourage and Support Independent Analysis</Button></a>
+        </Col>
+      </Row>
+    </Container>
+  </>
