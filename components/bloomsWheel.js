@@ -5,4 +5,4 @@ export default () => {
     return (
         <img className={`${isSpinning ? "bloomsWheel" : "bloomsWheelStopped"} cursor`} src="/images/tools/blooms.png" alt="blooms_wheel" onClick={() => toggleSpin(isSpinning ? false : true)} />
     )
-}
+};
