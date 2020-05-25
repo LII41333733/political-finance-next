@@ -1,41 +1,8 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* ================================== */
-
 /* #173041 */
+
+.app {
+    text-align: center;
+}
 
 @font-face {
     font-family: 'Schadow';
@@ -45,10 +12,12 @@
 
 body {
     background: #e8e8c975 !important;
+    margin: 0;
+    padding: 0;
 }
 
 .galleryCard {
-    max-width: 200px;
+    width: 200px;
     display: inline-block !important;
     max-height: 130px;
     overflow: hidden;
@@ -57,7 +26,6 @@ body {
 .galleryCard p {
     line-height: 16px;
     font-size: 16px;
-    text-align: center;
 }
 
 .card-img {
@@ -93,16 +61,10 @@ body {
 
 .container {
     height: 100%;
-    text-align: center;
 }
 
 .slimContain {
     padding: 0 200px !important;
-}
-
-.container-body {
-    min-height: 95vh;
-    margin-bottom: 200px;
 }
 
 .col {
@@ -117,15 +79,22 @@ p, table, body {
     font-family: 'Spectral', serif !important;
 }
 
-.navPill a {
+.navLinks a {
     font-family: "Schadow";
-    color: #173040c2;
-    padding-top: 5px;
 }
 
-.navPill a:hover {
+.nav-link {
+    font-family: "Schadow";
+    color: #173040c2;
+}
+
+.nav-link:hover {
     color: #173041 !important;
-    text-decoration: none;
+}
+
+.nav-link-confirm {
+    font-family: "Schadow";
+    color: #173040;
 }
 
 .cover {
@@ -154,7 +123,7 @@ p, table, body {
     margin-bottom: 5rem !important;
     font-family: "Schadow";
     height: 315px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .jumbo-homepage {
@@ -177,7 +146,7 @@ p, table, body {
 
 .jumbotron_tertiary {
     padding: 3rem 2rem !important;
-    height: 110px;
+    height: 100px;
     margin-bottom: 1rem !important;
 }
 
@@ -198,7 +167,7 @@ p, table, body {
     margin-bottom: 50px;
 }
 
-.navPill {
+.navLinks {
     display: flex;
     border-top: 3px solid #173041;
     border-bottom: 3px solid #173041;
@@ -292,7 +261,9 @@ p, table, body {
 }
 
 input {
+    width: 100%;
     border-radius: 5px;
+    height: inherit;
     padding: 5px 15px;
     margin-right: 10px !important;
 }
@@ -351,6 +322,18 @@ h3 {
 }
 
 /********************************************************** Utility Classes */
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+img {
+    border-radius: 3px;
+}
 
 .not-allowed {
     cursor: not-allowed;
@@ -425,7 +408,15 @@ a:hover {
 }
 
 .textSize-4 {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
+}
+
+.textSize-5 {
+    font-size: 1.3rem !important;
+}
+
+.textSize-6 {
+    font-size: 1.6rem !important;
 }
 
 .preWrap {
@@ -638,6 +629,21 @@ a:hover {
     left: 659px;
 }
 
+/**Gallery**/
+
+.glossaryHTML li:nth-child(odd) {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.glossaryHTML ul {
+    padding: 0
+}
+
+.glossaryHTML li {
+    list-style: none;
+}
+
 /**TAM**/
 
 .tamImg {
@@ -686,10 +692,11 @@ a:hover {
 
 .upArrow {
     position: absolute;
-    left: 9px;
+    left: 12px;
     top: -5px;
-    font-size: 39px;
+    font-size: 34px;
     color: #173041;
+    font-weight: bold;
 }
 
 .infoBtnCircle {
@@ -772,6 +779,8 @@ a:hover {
 
 .articlesContainer p {
     text-align: justify;
+    line-height: 35px;
+    clear: right;
 }
 
 .articleImg {
@@ -823,4 +832,48 @@ a:hover {
 
 .checkoutText td {
     padding: 5px 20px;
+}
+
+.modal-open {
+    padding-right: 15px !important;
+}
+
+@media only screen and (max-width: 960px) {
+    body, html {
+        max-width: 960px;
+    }
+    .jumbo-homepage {
+        height: inherit;
+        margin-bottom: 0 !important;
+        border-radius: 5px !important;
+    }
+    .cover {
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    body {
+        width: 576px;
+    }
+    .jumbo-homepage {
+        height: inherit;
+    }
+    .cover {
+        top: 0;
+    }
+    .articlesContainer img {
+        width: 100% !important;
+        max-width: initial;
+        padding: 20px;
+    }
+    .galleryModalImg {
+        max-width: 530px;
+    }
+    body .modal-backdrop {
+        width: 100% !important;
+    }
+    .modal-dialog.modal-lg {
+        margin: 0 auto;
+    }
 }

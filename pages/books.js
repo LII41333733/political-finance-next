@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from 'next/head'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -82,6 +83,10 @@ export default () => {
 
     return (
         <div>
+            <Head>
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" />
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css" />
+            </Head>
             <JumbotronDefault title={"Books"} />
             <Container className="container-body booksContainer" style={{ marginBottom: "50px" }}>
                 <Row style={{ justifyContent: "center" }}>

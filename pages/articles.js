@@ -7,13 +7,30 @@ import Button from 'react-bootstrap/Button'
 import { useState, useEffect } from "react";
 import JumbotronDefault from "../components/jumbotrons/jumbotronDefault";
 import articles from '../components/data/articles'
+import { scrollToTop } from "../components/utils/functions/scrollToTop"
+
+
+Articles.getInitialProps = async ({ req }) => {
+    let userAgent;
+    if (req) { // if you are on the server and you get a 'req' property from your context
+        userAgent = req.headers['user-agent'] // get the user-agent from the headers
+    } else {
+        userAgent = navigator.userAgent // if you are on the client you can access the navigator from the window object
+    }
+    let isMobile = Boolean(userAgent.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    ))
+
+    return { isMobile }
+}
 
 //525x150
-export default () => {
+export default function Articles({ isMobile }) {
     const [articleIndex, setArticleIndex] = useState(-1);
+    const articleSelected = articleIndex > -1;
 
     useEffect(() => {
-        setArticleIndex(3);
+        setArticleIndex(0);
     }, []);
 
     const RenderArticles = ({ articles }) => {
@@ -40,10 +57,11 @@ export default () => {
         const article = articles[articleIndex];
         const { title, date, body, footer } = article;
         return (
-            <div className="slimContain articlesContainer">
-                <h2 className="textColorPrimary schadow textCenter">{title.toUpperCase()}</h2>
-                <div style={{ height: "50px" }}>
-                    <p className={"d-inline mr-2 float-right"}>Bill Pacello</p><p className={"d-inline mr-5 float-right"}>{date}</p>
+            <div className={`${isMobile ? "p-3" : "slimContain"} articlesContainer`}>
+                <h2 className="textColorPrimary toolsTitle textCenter schadow">{title.toUpperCase()}</h2>
+                <div className={"text-center"}>
+                    <p className={"d-inline mr-2"}>Bill Pacello</p>
+                    <p className={"d-inline"}>{date}</p>
                 </div>
                 <div>
                     <img
@@ -57,33 +75,24 @@ export default () => {
         )
     }
 
-    const resetWindow = () => {
-        window.scrollTo({ top: 200, behavior: "smooth" });
-    }
-
-    const articleSelected = articleIndex > -1;
-
     return (
-        <div>
+        <>
             <JumbotronDefault title={"Articles"} />
-            <Container className={`container-body textLeft mb-5`}>
-                {/* {articleIndex > -1 &&
-                    <div
-                        className="backBtnCircle cursor"
-                        onClick={() => setArticleIndex(-1)}>
-                        <span className="backArrow">↩</span>
-                    </div>} */}
+            <Container
+                className={`container-body`}
+                style={{ paddingBottom: "50px" }}>
                 <Row style={{ justifyContent: "center" }}>
                     <RenderArticles
                         articles={articles} />
                 </Row>
                 <hr className="hr0" />
                 <hr className="hr1" />
-                <div
-                    className="upBtnCircle cursor"
-                    onClick={() => resetWindow()}>
-                    <span className="upArrow">↑</span>
-                </div>
+                {!isMobile &&
+                    <div
+                        className="upBtnCircle cursor"
+                        onClick={scrollToTop}>
+                        <span className="upArrow">↑</span>
+                    </div>}
                 <Row>
                     {articleSelected &&
                         <DisplayArticle
@@ -91,6 +100,6 @@ export default () => {
                             articleIndex={articleIndex} />}
                 </Row>
             </Container>
-        </div>
+        </>
     )
 }
