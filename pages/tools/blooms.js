@@ -1,5 +1,5 @@
 import React from "react";
-import BloomsWheel from "../../components/BloomsWheel";
+import BloomsWheel from "../../components/bloomsWheel";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import BackButton from '../../components/utils/backButton'
