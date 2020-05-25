@@ -2,7 +2,7 @@ import React from "react";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import JumbotronDefault from "../Components/Jumbotrons/JumbotronDefault";
+import JumbotronDefault from "../components/jumbotrons/jumbotronDefault";
 
 export default () =>
     <>

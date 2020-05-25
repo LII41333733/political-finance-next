@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
 import { useState, useEffect } from "react";
-import JumbotronDefault from "../Components/Jumbotrons/JumbotronDefault";
+import JumbotronDefault from "../components/jumbotrons/jumbotronDefault";
 import articles from '../components/data/articles'
 
 //525x150

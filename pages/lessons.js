@@ -5,8 +5,8 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
-import JumbotronDefault from "../Components/Jumbotrons/JumbotronDefault";
-import RenderCards from "../Components/utils/RenderCards";
+import JumbotronDefault from "../components/jumbotrons/jumbotronDefault";
+import RenderCards from "../components/utils/RenderCards";
 import Modal from 'react-bootstrap/Modal'
 import lessonPlans from '../components/data/lessonPlans'
 

@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
-import JumbotronDefault from '../Components/Jumbotrons/JumbotronDefault'
+import JumbotronDefault from '../components/jumbotrons/jumbotronDefault'
 import BookOneGallery from "../components/data/bookOneGallery"
 import BookTwoGallery from "../components/data/bookTwoGallery"
 
