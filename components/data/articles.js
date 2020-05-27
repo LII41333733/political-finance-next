@@ -5,7 +5,7 @@ export default [
         short: "Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where officials and capitalists were weighing and questioning the severity of COVID- 19 against the economic impact...",
         title: "The Revelations of COVID-19",
         thumbSrc: `/images/articles/coronavirus-thumb2.png`,
-        metaSrc: `images/articles/coronavirus-thumb.png`,
+        metaSrc: `/images/articles/coronavirus-thumb.png`,
         src: `/images/articles/coronavirus2.png`,
         date: `May 20, 2020`,
         body: (
@@ -99,7 +99,7 @@ export default [
         short: "As mentioned in the promotions for The Art of Political Finance Part I and II, the artists of the ...",
         title: `The \"Evolving Vise\" of the Command Economy`,
         thumbSrc: `/images/articles/vise-thumb.png`,
-        metaSrc: `images/articles/vise-thumb.png`,
+        metaSrc: `/images/articles/vise-thumb.png`,
         src: `/images/articles/vise.png`,
         date: "March 30, 2020",
         body: (<>
