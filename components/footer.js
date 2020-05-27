@@ -17,27 +17,27 @@ export default () => {
                         <Row
                             className="">
                             <Col className="d-flex justify-content-between footerNav">
-                                <Link href="/"><h5
-                                    className="cursor"
-                                >Home</h5></Link>
-                                <Link href="/books"><h5
-                                    className="cursor"
-                                >Books</h5></Link>
-                                <Link href="/lessons"><h5
-                                    className="cursor"
-                                >Lesson Plans</h5></Link>
-                                <Link href="/tools"><h5
-                                    className="cursor"
-                                >Tools</h5></Link>
-                                <Link href="/articles"><h5
-                                    className="cursor"
-                                >Articles</h5></Link>
-                                <Link href="/iaq"><h5
-                                    className="cursor"
-                                >IAQs</h5></Link>
-                                <Link href="/about"><h5
-                                    className="cursor"
-                                >About</h5></Link>
+                                <Link href="/">
+                                    <h5 className="cursor">Home</h5>
+                                </Link>
+                                <Link href="/books">
+                                    <h5 className="cursor">Books</h5>
+                                </Link>
+                                <Link href="/lessons">
+                                    <h5 className="cursor">Lesson Plans</h5>
+                                </Link>
+                                <Link href="/tools">
+                                    <h5 className="cursor">Tools</h5>
+                                </Link>
+                                <Link href="/articles">
+                                    <h5 className="cursor">Articles</h5>
+                                </Link>
+                                <Link href="/iaq">
+                                    <h5 className="cursor">IAQs</h5>
+                                </Link>
+                                <Link href="/about">
+                                    <h5 className="cursor">About</h5>
+                                </Link>
                             </Col>
                         </Row>
                         {/* <Row>

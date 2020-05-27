@@ -2,9 +2,10 @@ import React from "react";
 
 export default [
     {
+        short: "Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where officials and capitalists were weighing and questioning the severity of COVID- 19 against the economic impact...",
         title: "The Revelations of COVID-19",
-        thumbSrc: `images/articles/coronavirus-thumb2.png`,
-        src: `images/articles/coronavirus2.png`,
+        thumbSrc: `/images/articles/coronavirus-thumb2.png`,
+        src: `/images/articles/coronavirus2.png`,
         date: `May 20, 2020`,
         body: (
             <>
@@ -59,12 +60,7 @@ export default [
                 <p>
                     The belligerents in this recession appear to be Democratically-controlled states who have irresponsibly run
                     with deficit budgets for decades and the Federal Government who, in conjunction with the Federal Reserve,
-                    can print money on demand. These practices are respectively known as liberal fiscal policy, at the state level,
-                    Figure 1 Wales, James Albert. The Proper Way. Puck—&quot;Come
-                    down both of you off your high horses and meet on equal
-                    ground.&quot; 1886.
-
-                    and liberal monetary policy at the federal level. If the Feds decide to bailout the states with no stipulations on
+                    can print money on demand. These practices are respectively known as liberal fiscal policy, at the state level, and liberal monetary policy at the federal level. If the Feds decide to bailout the states with no stipulations on
                     budgetary constraints, then what we are witnessing is modern liberalism represented on both sides with
                     taxpayers—current and future—footing the bill, not only by way of money but by way of time, freedom, and
                     property. This is not what Americans are accustomed to hearing. We are accustomed to hearing that
@@ -93,12 +89,15 @@ export default [
                     liberalism.
                 </p>
             </>
+        ),
+        footer: (
+            <p><sup>i</sup> Figure 1 Wales, James Albert. The Proper Way. Puck—&quot;Come down both of you off your high horses and meet on equal ground.&quot; 1886.</p>
         )
     },
     {
         title: `The \"Evolving Vise\" of the Command Economy`,
-        thumbSrc: `images/articles/vise-thumb.png`,
-        src: `images/articles/vise.png`,
+        thumbSrc: `/images/articles/vise-thumb.png`,
+        src: `/images/articles/vise.png`,
         date: "March 30, 2020",
         body: (<>
             <p>
@@ -137,7 +136,7 @@ export default [
                 which many of us were indoctrinated. Officials clearly sided with the consolidated capital donor class through
                 the labor disputes of the 19th century.
                 </p>
-            <img className={"float-left"} src="images/articles/vise2.png" />
+            <img className={"float-left"} src="/images/articles/vise2.png" />
             <p>
                 So far, the free-market system
                 seems to bring the most
@@ -176,7 +175,7 @@ Royal Society.</p>
                 antithesis). Since the free market did not reign in monopoly, calls for fairness, true free markets, and socialism
                 grew. The graphic of the dialectic may look something like this today:
                 </p>
-            <img className={"d-block mx-auto"} src="images/articles/vise3.png" />
+            <img className={"d-block mx-auto"} src="/images/articles/vise3.png" />
             <p>
                 As you can see from figure 3 above, part of the pressure from the vise that humanity feels today is due to the central command applied by both plates of thesis and antithesis as shown in the resulting vise below.
 
@@ -198,7 +197,7 @@ Royal Society.</p>
                     brings to mind a quote
                     from one of our less poular presidents.
                 </p>
-            <img className={"float-left"} src="images/articles/vise4.png" />
+            <img className={"float-left"} src="/images/articles/vise4.png" />
             <p>
                 <em>The federal government will find its agency most conducive to the security
                 and happiness of the people when limited to the exercise of its conceded
@@ -211,8 +210,8 @@ the general welfare.</em></p>
     },
     {
         title: "The Corona Virus: Your Money or Your Life",
-        thumbSrc: `images/articles/coronavirus-thumb.png`,
-        src: `images/articles/coronavirus.png`,
+        thumbSrc: `/images/articles/coronavirus-thumb.png`,
+        src: `/images/articles/coronavirus.png`,
         date: `March 26, 2020`,
         body: (<>
             <p>
@@ -265,8 +264,8 @@ the general welfare.</em></p>
     },
     {
         title: "Impeach King Trump",
-        thumbSrc: `images/articles/trump-thumb.png`,
-        src: `images/articles/trump.png`,
+        thumbSrc: `/images/articles/trump-thumb.png`,
+        src: `/images/articles/trump.png`,
         date: `March 12, 2019`,
         body: (<>
             <p>
@@ -289,8 +288,8 @@ the general welfare.</em></p>
     },
     {
         title: "Battleships and Bromides",
-        thumbSrc: `images/articles/battleships-thumb.png`,
-        src: `images/articles/battleships.png`,
+        thumbSrc: `/images/articles/battleships-thumb.png`,
+        src: `/images/articles/battleships.png`,
         date: `February 5, 2019`,
         body: (<>
             <h4 className={`textColorPrimary toolsTitle`}>HOW THE WORLD WAS FASHIONED <br /> BY PIN PRICKS</h4>

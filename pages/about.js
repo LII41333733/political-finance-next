@@ -8,7 +8,7 @@ import JumbotronDefault from "../components/jumbotrons/jumbotronDefault";
 export default () =>
     <>
         <JumbotronDefault title={"About"} />
-        <Container>
+        <Container className="slimContain">
             <Row>
                 <Col>
                     <p className="textBlock">This site was developed in support of my books entitled The Art of Political Finance with corresponding lesson plans, and other teaching and learning tools for history buffs, students, teachers, parents, and home schoolers in an effort to help orient students and people to their environment, often referred to as the political economy.  In addition to the lesson plans, some of the tools will include timelines, calculators, planning models, and other items that will help facilitate that orientation.</p>
