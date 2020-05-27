@@ -2,100 +2,6 @@ import React from "react";
 
 export default [
     {
-        short: "Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where officials and capitalists were weighing and questioning the severity of COVID- 19 against the economic impact...",
-        title: "The Revelations of COVID-19",
-        thumbSrc: `https://www.billpacello.com/images/articles/coronavirus-thumb2.png`,
-        metaSrc: `https://www.billpacello.com/images/articles/coronavirus-meta.png`,
-        src: `https://www.billpacello.com/images/articles/coronavirus2.png`,
-        date: `May 20, 2020`,
-        body: (
-            <>
-                <p>
-                    Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where
-                    officials and capitalists were weighing and questioning
-                    the severity of COVID-19 against the economic impact
-                    of isolation. I used the same cartoon by James Albert
-                    Wales because of the relevance of the battle that has
-                    been waging for over 150 years in the United States,
-                    but with a little variation. In the cartoon, Wales depicts
-                    monopoly (organized capital) against socialism
-                    (organized labor) with Puck seemingly pointing toward a
-                    blindfolded Lady Liberty trying to maintain the scales of
-                    justice.
-                </p>
-                <p>
-                    In the 21<sup>st</sup>-century political economy the belligerents
-                    may have changed a little. Monopoly is still organized
-                    capital, maybe even more consolidated than in the
-                    Gilded Age, but socialism, as it was named,
-                    represented organized labor. Today, our “labor” force is
-                    comprised more of administration, at the civil and
-                    municipal levels, and less of production and labor as
-                    many of those types of jobs have been exported since
-                    the 1990s. Jack Bogle, of Vanguard, had once
-                    summarized the evolution of the American economy as
-                    Agrarian, Industrial, Service, and Paper. We might add
-                    “Digital” or “Virtual” to that evolution. And so, our paper
-                    or digital economy has taken an enormous hit with an
-                    estimated 30 million newly unemployed, which brings
-                    us to a revelation. Since the authorities at the state and
-                    federal levels have mandated that only “essential”
-                    businesses stay open and employees report, it begs the
-                    question of what is considered essential and what is not.
-                </p>
-                <p>
-                    If COVID-19 is as lethal and as contagious as advertised, then why are big-box stores like Home Depot, and
-                    Walmart permitted to stay open to the public, even with so-called distancing in place? Why are we receiving
-                    postal mail—most of it commercial junk mail? How safe are newspapers and those annoying flyers that are
-                    thrown on the driveway every week? The inconsistent policies have revealed the fluff in our economy and the
-                    superfluous capital that recessions correct, IF PERMITTED. We have had two major recessions now in this
-                    highly lauded 21<sup>st</sup>-century economy. Which brings us to another revelation. The talking heads, the State and
-                    the media, erroneously refer to the market as the economy in the context of opening and closing businesses,
-                    schools, and organizations. The obfuscation begins to clear up by analyzing the language. A state cannot open
-                    or close an economy. It can help or hurt an economy which has been the battle between conservatives and
-                    liberals since the United States was founded. The more accurate term, which pundits avoid, that describes the
-                    mandates is market, or free market. Yes, there are other organizations like educational institutions which have
-                    been closed, but officials and the mainstream media do not use harsh language like “we had to shut down the
-                    free market,” because without a free market you cannot have a free society.
-                </p>
-                <p>
-                    The belligerents in this recession appear to be Democratically-controlled states who have irresponsibly run
-                    with deficit budgets for decades and the Federal Government who, in conjunction with the Federal Reserve,
-                    can print money on demand. These practices are respectively known as liberal fiscal policy, at the state level, and liberal monetary policy at the federal level. If the Feds decide to bailout the states with no stipulations on
-                    budgetary constraints, then what we are witnessing is modern liberalism represented on both sides with
-                    taxpayers—current and future—footing the bill, not only by way of money but by way of time, freedom, and
-                    property. This is not what Americans are accustomed to hearing. We are accustomed to hearing that
-                    Republicans are conservative, and Democrats are liberal. This may be true with social issues, but
-                    “inflationeering”—liberal monetary and fiscal policy—has been leveraged by both parties in this century.
-                </p>
-                <p>
-                    To help us understand this conflict even further, it appears that the collective is actually an antagonist to “We
-                    the People.” In a classical sense, people and their individual liberty represented liberalism. In the modern
-                    sense, liberalism is more related to collectively-controlled mechanisms, collective capital and collective
-                    bargaining. In this context the people who have not found a musical chair succumb to the vise of collectivism
-                    (modern liberalism). Ironically, modern liberals and their public relations machine vehemently criticize classical
-                    liberals (individuals) who do not wear masks and who also want the free market and their small businesses to
-                    open so they can pay tribute to the modern liberal machine. This condition is more apparent in blue states that
-                    rely heavily on deficit spending and have blitzed us with public relation campaigns. Writing from the beautiful
-                    state of New Jersey, and it is a beautiful state, represents the quintessential case of collective capital from New
-                    York with collective bargaining from Trenton. A friend in Indiana, a red state running at a surplus, tells me that
-                    people in his state do not want a federal bailout nor need one. Another argument for the passage of balanced
-                    budget legislation.
-                </p>
-                <p>
-                    Ironically, I was a proponent of states’ rights in the plight against federal overreach that started after the Civil
-                    War, and still am. However, if states operate irresponsibly, it is apparent that they cede their rights to the Fed.
-                    COVID-19 has revealed many aspects about the lifestyle of 21<sup>st</sup>-century Americans and the economy. Maybe
-                    it’s time to obey the force that is compelling us to cut back on the overdone commercial chaos and modern
-                    liberalism.
-                </p>
-            </>
-        ),
-        footer: (
-            <p><sup>i</sup> Figure 1 Wales, James Albert. The Proper Way. Puck—&quot;Come down both of you off your high horses and meet on equal ground.&quot; 1886.</p>
-        )
-    },
-    {
         short: "As mentioned in the promotions for The Art of Political Finance Part I and II, the artists of the ...",
         title: `The \"Evolving Vise\" of the Command Economy`,
         thumbSrc: `https://www.billpacello/images/articles/vise-thumb.jpg`,
@@ -386,5 +292,101 @@ the general welfare.</em></p>
         footer: (
             <p><sup>i</sup> Madrick, Jeff.“How the Invisible Hand Was Corrupted by Laissez- Faire Economics.” <em>Evonomics</em>, 3 May 2018</p>
         )
-    }
+    },
+    {
+        short: "Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where officials and capitalists were weighing and questioning the severity of COVID- 19 against the economic impact...",
+        title: "The Revelations of COVID-19",
+        thumbSrc: `https://www.billpacello.com/images/articles/coronavirus-thumb2.png`,
+        metaSrc: `https://www.billpacello.com/images/articles/coronavirus-meta.png`,
+        src: `https://www.billpacello.com/images/articles/coronavirus2.png`,
+        date: `May 20, 2020`,
+        body: (
+            <>
+                <p>
+                    Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where
+                    officials and capitalists were weighing and questioning
+                    the severity of COVID-19 against the economic impact
+                    of isolation. I used the same cartoon by James Albert
+                    Wales because of the relevance of the battle that has
+                    been waging for over 150 years in the United States,
+                    but with a little variation. In the cartoon, Wales depicts
+                    monopoly (organized capital) against socialism
+                    (organized labor) with Puck seemingly pointing toward a
+                    blindfolded Lady Liberty trying to maintain the scales of
+                    justice.
+                </p>
+                <p>
+                    In the 21<sup>st</sup>-century political economy the belligerents
+                    may have changed a little. Monopoly is still organized
+                    capital, maybe even more consolidated than in the
+                    Gilded Age, but socialism, as it was named,
+                    represented organized labor. Today, our “labor” force is
+                    comprised more of administration, at the civil and
+                    municipal levels, and less of production and labor as
+                    many of those types of jobs have been exported since
+                    the 1990s. Jack Bogle, of Vanguard, had once
+                    summarized the evolution of the American economy as
+                    Agrarian, Industrial, Service, and Paper. We might add
+                    “Digital” or “Virtual” to that evolution. And so, our paper
+                    or digital economy has taken an enormous hit with an
+                    estimated 30 million newly unemployed, which brings
+                    us to a revelation. Since the authorities at the state and
+                    federal levels have mandated that only “essential”
+                    businesses stay open and employees report, it begs the
+                    question of what is considered essential and what is not.
+                </p>
+                <p>
+                    If COVID-19 is as lethal and as contagious as advertised, then why are big-box stores like Home Depot, and
+                    Walmart permitted to stay open to the public, even with so-called distancing in place? Why are we receiving
+                    postal mail—most of it commercial junk mail? How safe are newspapers and those annoying flyers that are
+                    thrown on the driveway every week? The inconsistent policies have revealed the fluff in our economy and the
+                    superfluous capital that recessions correct, IF PERMITTED. We have had two major recessions now in this
+                    highly lauded 21<sup>st</sup>-century economy. Which brings us to another revelation. The talking heads, the State and
+                    the media, erroneously refer to the market as the economy in the context of opening and closing businesses,
+                    schools, and organizations. The obfuscation begins to clear up by analyzing the language. A state cannot open
+                    or close an economy. It can help or hurt an economy which has been the battle between conservatives and
+                    liberals since the United States was founded. The more accurate term, which pundits avoid, that describes the
+                    mandates is market, or free market. Yes, there are other organizations like educational institutions which have
+                    been closed, but officials and the mainstream media do not use harsh language like “we had to shut down the
+                    free market,” because without a free market you cannot have a free society.
+                </p>
+                <p>
+                    The belligerents in this recession appear to be Democratically-controlled states who have irresponsibly run
+                    with deficit budgets for decades and the Federal Government who, in conjunction with the Federal Reserve,
+                    can print money on demand. These practices are respectively known as liberal fiscal policy, at the state level, and liberal monetary policy at the federal level. If the Feds decide to bailout the states with no stipulations on
+                    budgetary constraints, then what we are witnessing is modern liberalism represented on both sides with
+                    taxpayers—current and future—footing the bill, not only by way of money but by way of time, freedom, and
+                    property. This is not what Americans are accustomed to hearing. We are accustomed to hearing that
+                    Republicans are conservative, and Democrats are liberal. This may be true with social issues, but
+                    “inflationeering”—liberal monetary and fiscal policy—has been leveraged by both parties in this century.
+                </p>
+                <p>
+                    To help us understand this conflict even further, it appears that the collective is actually an antagonist to “We
+                    the People.” In a classical sense, people and their individual liberty represented liberalism. In the modern
+                    sense, liberalism is more related to collectively-controlled mechanisms, collective capital and collective
+                    bargaining. In this context the people who have not found a musical chair succumb to the vise of collectivism
+                    (modern liberalism). Ironically, modern liberals and their public relations machine vehemently criticize classical
+                    liberals (individuals) who do not wear masks and who also want the free market and their small businesses to
+                    open so they can pay tribute to the modern liberal machine. This condition is more apparent in blue states that
+                    rely heavily on deficit spending and have blitzed us with public relation campaigns. Writing from the beautiful
+                    state of New Jersey, and it is a beautiful state, represents the quintessential case of collective capital from New
+                    York with collective bargaining from Trenton. A friend in Indiana, a red state running at a surplus, tells me that
+                    people in his state do not want a federal bailout nor need one. Another argument for the passage of balanced
+                    budget legislation.
+                </p>
+                <p>
+                    Ironically, I was a proponent of states’ rights in the plight against federal overreach that started after the Civil
+                    War, and still am. However, if states operate irresponsibly, it is apparent that they cede their rights to the Fed.
+                    COVID-19 has revealed many aspects about the lifestyle of 21<sup>st</sup>-century Americans and the economy. Maybe
+                    it’s time to obey the force that is compelling us to cut back on the overdone commercial chaos and modern
+                    liberalism.
+                </p>
+            </>
+        ),
+        footer: (
+            <p><sup>i</sup> Figure 1 Wales, James Albert. The Proper Way. Puck—&quot;Come down both of you off your high horses and meet on equal ground.&quot; 1886.</p>
+        )
+    },
+
+
 ];
