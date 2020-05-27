@@ -90,6 +90,7 @@ export default function Articles({ isMobile }) {
                 <meta property="og:image:width" content="1312" />
                 <meta property="og:image:height" content="496" />
                 <meta property="og:url" content={`https://www.billpacello.com/articles/${pid}`} />
+                <meta property="og:type" content="website" />
 
 
 
