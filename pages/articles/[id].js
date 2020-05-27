@@ -75,7 +75,7 @@ export default function Articles({ isMobile }) {
         )
     }
     console.log("==========================")
-    console.log(parseInt(id))
+    console.log(`https://www.billpacello.com/articles/${id}`)
     const i = parseInt(id) - 1;
     console.log(articles)
     console.log(i)
