@@ -67,19 +67,20 @@ export default function Articles({ isMobile }) {
             </div>
         )
     }
-
+    const i = articles.length - 1
     return (
         <>
-            {/* <Head>
+            <Head>
                 <title>{articles[i].title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta property="og:title" content={articles[i].title} />
                 <meta property="og:description" content={articles[i].short} />
-                <meta property="og:image" content={articles[i].title.thumbSrc} />
-                <meta property="og:image:width" content="500" />
-                <meta property="og:image:height" content="199" />
-                <meta property="og:url" content={`https://www.billpacello.com/articles/${i}`} />
-            </Head> */}
+                <meta property="og:image" content={articles[i].metaSrc} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="628" />
+                <meta property="og:url" content={`https://www.billpacello.com/articles`} />
+                <meta property="og:type" content="website" />
+            </Head>
             <JumbotronDefault title={"Articles"} />
             <Container
                 className={`container-body`}
