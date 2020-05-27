@@ -78,7 +78,7 @@ export default function Articles({ isMobile }) {
 
     const i = parseInt(pid) - 1;
     console.log("================")
-    console.log(i)
+    console.log(pid)
     return (
         <>
             <Head>
@@ -89,7 +89,7 @@ export default function Articles({ isMobile }) {
                 <meta property="og:image" content={articles[i].title.thumbSrc} />
                 <meta property="og:image:width" content="500" />
                 <meta property="og:image:height" content="199" />
-                <meta property="og:url" content={`https://www.billpacedllo.com/articles/${id}`} />
+                <meta property="og:url" content={`https://www.billpacello.com/articles/${pid}`} />
 
 
 
