@@ -271,7 +271,7 @@ the general welfare.</em></p>
         short: "For three years we have heard calls for the impeachment of President Trump for any number of alleged infractions; Russian collusion...",
         title: "Impeach King Trump",
         thumbSrc: `https://www.billpacello/images/articles/trump-thumb.png`,
-        metaSrc: `https://www.billpacello/images/articles/trump-thumb.png`,
+        metaSrc: `https://www.billpacello/images/articles/trump-meta.png`,
         src: `https://www.billpacello/images/articles/trump.png`,
         date: `March 12, 2019`,
         body: (<>
