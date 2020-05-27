@@ -23,8 +23,9 @@ Articles.getInitialProps = async ({ req }) => {
 
 //525x150
 export default function Articles({ isMobile }) {
+
     const router = useRouter()
-    const { id } = router.query
+    const { pid } = router.query
 
     const [articleIndex, setArticleIndex] = useState(-1);
     const articleSelected = articleIndex > -1;
@@ -74,33 +75,22 @@ export default function Articles({ isMobile }) {
             </div>
         )
     }
-    console.log("==========================")
-    console.log(`https://www.billpacello.com/articles/${id}`)
-    const i = parseInt(id) - 1;
-    console.log(articles)
+
+    const i = parseInt(pid) - 1;
+    console.log("================")
     console.log(i)
     return (
         <>
             <Head>
                 <title>{articles[i].title}</title>
-                <meta property="title" content={"Hello Worldzz"} />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta property="og:title" content={articles[i].title} />
                 <meta property="og:description" content={articles[i].short} />
-                <meta property="og:image" content={"/images/articles/coronavirus-thumb2.png"} />
+                <meta property="og:image" content={articles[i].title.thumbSrc} />
                 <meta property="og:image:width" content="500" />
                 <meta property="og:image:height" content="199" />
-                <meta property="og:url" content={`https://www.billpacello.com/articles/${id}`} />
-
+                <meta property="og:url" content={`https://www.billpacello.com/articles/${i}`} />
             </Head>
-
-            {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta property="og:title" content={"The Revelations of COVID-19"} />
-                <meta property="og:description" content={"Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where officials and capitalists were weighing and questioning the severity of COVID- 19 against the economic impact..."} />
-                <meta property="og:image" content={"/images/articles/coronavirus-thumb2.png"} />
-                <meta property="og:image:width" content="500" />
-                <meta property="og:image:height" content="199" />
-                <meta property="og:url" content={`https://www.billpacello.com/articles/1`} /> */}
             <JumbotronDefault title={"Articles"} />
             <Container
                 className={`container-body`}
