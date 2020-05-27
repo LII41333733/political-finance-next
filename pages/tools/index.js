@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import JumbotronDefault from "../../components/jumbotrons/jumbotronDefault";
 import RenderToolCards from "../../components/utils/renderToolCards";
+import Head from 'next/head'
+
 
 export default () =>
     <>
