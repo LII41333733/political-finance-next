@@ -99,7 +99,7 @@ export default [
         short: "As mentioned in the promotions for The Art of Political Finance Part I and II, the artists of the ...",
         title: `The \"Evolving Vise\" of the Command Economy`,
         thumbSrc: `/images/articles/vise-thumb.png`,
-        metaSrc: `images/articles/vise-thumb.png`,
+        metaSrc: `https://www.billpacello/images/articles/vise-thumb.png`,
         src: `/images/articles/vise.png`,
         date: "March 30, 2020",
         body: (<>
@@ -214,6 +214,7 @@ the general welfare.</em></p>
     {
         title: "The Corona Virus: Your Money or Your Life",
         thumbSrc: `/images/articles/coronavirus-thumb.jpg`,
+        metaSrc: `https://www.billpacello/images/articles/coronavirus-thumb.jpg`,
         src: `/images/articles/coronavirus.png`,
         date: `March 26, 2020`,
         body: (<>
