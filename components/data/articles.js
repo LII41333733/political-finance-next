@@ -98,9 +98,9 @@ export default [
     {
         short: "As mentioned in the promotions for The Art of Political Finance Part I and II, the artists of the ...",
         title: `The \"Evolving Vise\" of the Command Economy`,
-        thumbSrc: `/images/articles/vise-thumb.jpg`,
-        metaSrc: `https://www.billpacello/images/articles/vise-thumb.jpg`,
-        src: `/images/articles/vise.png`,
+        thumbSrc: `https://www.billpacello/images/articles/vise-thumb.jpg`,
+        metaSrc: `https://www.billpacello/images/articles/vise-meta.png`,
+        src: `https://www.billpacello.com/images/articles/vise.png`,
         date: "March 30, 2020",
         body: (<>
             <p>
@@ -212,9 +212,10 @@ the general welfare.</em></p>
         )
     },
     {
+        short: "What we are experiencing is a seasonal existential event...relative to our time and the money...",
         title: "The Corona Virus: Your Money or Your Life",
-        thumbSrc: `/images/articles/coronavirus-thumb.jpg`,
-        metaSrc: `https://www.billpacello/images/articles/coronavirus-thumb.jpg`,
+        thumbSrc: `https://www.billpacello/images/articles/coronavirus-thumb.jpg`,
+        metaSrc: `https://www.billpacello/images/articles/coronavirus-meta.jpg`,
         src: `/images/articles/coronavirus.png`,
         date: `March 26, 2020`,
         body: (<>
@@ -267,9 +268,11 @@ the general welfare.</em></p>
         footer: ""
     },
     {
+        short: "For three years we have heard calls for the impeachment of President Trump for any number of alleged infractions; Russian collusion...",
         title: "Impeach King Trump",
-        thumbSrc: `/images/articles/trump-thumb.png`,
-        src: `/images/articles/trump.png`,
+        thumbSrc: `https://www.billpacello/images/articles/trump-thumb.png`,
+        metaSrc: `https://www.billpacello/images/articles/trump-thumb.png`,
+        src: `https://www.billpacello/images/articles/trump.png`,
         date: `March 12, 2019`,
         body: (<>
             <p>
@@ -292,8 +295,9 @@ the general welfare.</em></p>
     },
     {
         title: "Battleships and Bromides",
-        thumbSrc: `/images/articles/battleships-thumb.png`,
-        src: `/images/articles/battleships.png`,
+        thumbSrc: `https://www.billpacello/images/articles/battleships-thumb.png`,
+        metaSrc: `https://www.billpacello/images/articles/battleships-thumb.png`,
+        src: `https://www.billpacello/images/articles/battleships.png`,
         date: `February 5, 2019`,
         body: (<>
             <h4 className={`textColorPrimary toolsTitle`}>HOW THE WORLD WAS FASHIONED <br /> BY PIN PRICKS</h4>

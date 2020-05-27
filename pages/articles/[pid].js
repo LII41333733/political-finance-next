@@ -27,7 +27,7 @@ export default function Articles({ isMobile }) {
     const router = useRouter()
     const { pid } = router.query
 
-    const [articleIndex, setArticleIndex] = useState(-1);
+    const [articleIndex, setArticleIndex] = useState(parseInt(pid) - 1);
     const articleSelected = articleIndex > -1;
 
     useEffect(() => {
