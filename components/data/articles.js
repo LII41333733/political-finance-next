@@ -126,7 +126,7 @@ export default [
         short: "What we are experiencing is a seasonal existential event...relative to our time and the money...",
         title: "The Corona Virus: Your Money or Your Life",
         thumbSrc: `https://www.billpacello.com/images/articles/coronavirus-thumb.jpg`,
-        metaSrc: `https://www.billpacello.com/images/articles/coronavirus-meta.jpg`,
+        metaSrc: `https://www.billpacello.com/images/articles/coronavirus-meta.png`,
         src: `https://www.billpacello.com/images/articles/coronavirus.png`,
         date: `March 26, 2020`,
         body: (<>
