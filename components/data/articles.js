@@ -4,8 +4,8 @@ export default [
     {
         short: "As mentioned in the promotions for The Art of Political Finance Part I and II, the artists of the ...",
         title: `The \"Evolving Vise\" of the Command Economy`,
-        thumbSrc: `https://www.billpacello/images/articles/vise-thumb.jpg`,
-        metaSrc: `https://www.billpacello/images/articles/vise-meta.png`,
+        thumbSrc: `https://www.billpacello.com/images/articles/vise-thumb.jpg`,
+        metaSrc: `https://www.billpacello.com/images/articles/vise-meta.png`,
         src: `https://www.billpacello.com/images/articles/vise.png`,
         date: "March 30, 2020",
         body: (<>
@@ -120,9 +120,9 @@ the general welfare.</em></p>
     {
         short: "What we are experiencing is a seasonal existential event...relative to our time and the money...",
         title: "The Corona Virus: Your Money or Your Life",
-        thumbSrc: `https://www.billpacello/images/articles/coronavirus-thumb.jpg`,
-        metaSrc: `https://www.billpacello/images/articles/coronavirus-meta.jpg`,
-        src: `https://www.billpacello/images/articles/coronavirus.png`,
+        thumbSrc: `https://www.billpacello.com/images/articles/coronavirus-thumb.jpg`,
+        metaSrc: `https://www.billpacello.com/images/articles/coronavirus-meta.jpg`,
+        src: `https://www.billpacello.com/images/articles/coronavirus.png`,
         date: `March 26, 2020`,
         body: (<>
             <p>
@@ -176,9 +176,9 @@ the general welfare.</em></p>
     {
         short: "For three years we have heard calls for the impeachment of President Trump for any number of alleged infractions; Russian collusion...",
         title: "Impeach King Trump",
-        thumbSrc: `https://www.billpacello/images/articles/trump-thumb.png`,
-        metaSrc: `https://www.billpacello/images/articles/trump-meta.png`,
-        src: `https://www.billpacello/images/articles/trump.png`,
+        thumbSrc: `https://www.billpacello.com/images/articles/trump-thumb.png`,
+        metaSrc: `https://www.billpacello.com/images/articles/trump-meta.png`,
+        src: `https://www.billpacello.com/images/articles/trump.png`,
         date: `March 12, 2019`,
         body: (<>
             <p>
@@ -202,9 +202,9 @@ the general welfare.</em></p>
     {
         short: "For those of you who are not familiar with the story, an ox goad was a stick with a pointed piece of iron on its tip used to prod the oxen when plowing.",
         title: "Battleships and Bromides",
-        thumbSrc: `https://www.billpacello/images/articles/battleships-thumb.png`,
-        metaSrc: `https://www.billpacello/images/articles/battleships-meta.png`,
-        src: `https://www.billpacello/images/articles/battleships.png`,
+        thumbSrc: `https://www.billpacello.com/images/articles/battleships-thumb.png`,
+        metaSrc: `https://www.billpacello.com/images/articles/battleships-meta.png`,
+        src: `https://www.billpacello.com/images/articles/battleships.png`,
         date: `February 5, 2019`,
         body: (<>
             <h4 className={`textColorPrimary toolsTitle`}>HOW THE WORLD WAS FASHIONED <br /> BY PIN PRICKS</h4>
