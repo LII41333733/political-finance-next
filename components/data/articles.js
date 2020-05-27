@@ -98,8 +98,8 @@ export default [
     {
         short: "As mentioned in the promotions for The Art of Political Finance Part I and II, the artists of the ...",
         title: `The \"Evolving Vise\" of the Command Economy`,
-        thumbSrc: `/images/articles/vise-thumb.png`,
-        metaSrc: `https://www.billpacello/images/articles/vise-thumb.png`,
+        thumbSrc: `/images/articles/vise-thumb.jpg`,
+        metaSrc: `https://www.billpacello/images/articles/vise-thumb.jpg`,
         src: `/images/articles/vise.png`,
         date: "March 30, 2020",
         body: (<>
