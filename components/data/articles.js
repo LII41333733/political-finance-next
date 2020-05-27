@@ -98,6 +98,7 @@ export default [
     {
         title: `The \"Evolving Vise\" of the Command Economy`,
         thumbSrc: `/images/articles/vise-thumb.png`,
+        metaSrc: `images/articles/vise-thumb.png`,
         src: `/images/articles/vise.png`,
         date: "March 30, 2020",
         body: (<>
