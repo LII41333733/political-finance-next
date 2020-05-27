@@ -216,7 +216,7 @@ the general welfare.</em></p>
         title: "The Corona Virus: Your Money or Your Life",
         thumbSrc: `https://www.billpacello/images/articles/coronavirus-thumb.jpg`,
         metaSrc: `https://www.billpacello/images/articles/coronavirus-meta.jpg`,
-        src: `/images/articles/coronavirus.png`,
+        src: `https://www.billpacello/images/articles/coronavirus.png`,
         date: `March 26, 2020`,
         body: (<>
             <p>
