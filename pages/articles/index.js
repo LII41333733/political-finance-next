@@ -23,9 +23,6 @@ Articles.getInitialProps = async ({ req }) => {
 
 //525x150
 export default function Articles({ isMobile }) {
-    const router = useRouter()
-    const { id } = router.query
-
     const [articleIndex, setArticleIndex] = useState(-1);
     const articleSelected = articleIndex > -1;
 
@@ -74,14 +71,10 @@ export default function Articles({ isMobile }) {
             </div>
         )
     }
-    console.log("==========================")
-    console.log(parseInt(id))
-    const i = parseInt(id) - 1;
-    console.log(articles)
-    console.log(i)
+
     return (
         <>
-            <Head>
+            {/* <Head>
                 <title>{articles[i].title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta property="og:title" content={articles[i].title} />
@@ -90,7 +83,7 @@ export default function Articles({ isMobile }) {
                 <meta property="og:image:width" content="500" />
                 <meta property="og:image:height" content="199" />
                 <meta property="og:url" content={`https://www.billpacello.com/articles/${i}`} />
-            </Head>
+            </Head> */}
             <JumbotronDefault title={"Articles"} />
             <Container
                 className={`container-body`}
