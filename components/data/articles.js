@@ -200,6 +200,7 @@ the general welfare.</em></p>
         )
     },
     {
+        short: "For those of you who are not familiar with the story, an ox goad was a stick with a pointed piece of iron on its tip used to prod the oxen when plowing.",
         title: "Battleships and Bromides",
         thumbSrc: `https://www.billpacello/images/articles/battleships-thumb.png`,
         metaSrc: `https://www.billpacello/images/articles/battleships-meta.png`,
