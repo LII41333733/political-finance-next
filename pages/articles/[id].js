@@ -94,7 +94,7 @@ export default function Articles({ isMobile }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta property="og:title" content={"The Revelations of COVID-19"} />
                 <meta property="og:description" content={"Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where officials and capitalists were weighing and questioning the severity of COVID- 19 against the economic impact..."} />
-                <meta property="og:image" content={"/images/articles/coronavirus-thumb2.png"} />
+                {/* <meta property="og:image" content={"/images/articles/coronavirus-thumb2.png"} /> */}
                 <meta property="og:image:width" content="500" />
                 <meta property="og:image:height" content="199" />
                 <meta property="og:url" content={`https://www.billpacello.com/articles/1`} />
