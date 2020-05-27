@@ -296,7 +296,7 @@ the general welfare.</em></p>
     {
         title: "Battleships and Bromides",
         thumbSrc: `https://www.billpacello/images/articles/battleships-thumb.png`,
-        metaSrc: `https://www.billpacello/images/articles/battleships-thumb.png`,
+        metaSrc: `https://www.billpacello/images/articles/battleships-meta.png`,
         src: `https://www.billpacello/images/articles/battleships.png`,
         date: `February 5, 2019`,
         body: (<>
