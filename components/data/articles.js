@@ -5,7 +5,7 @@ export default [
         short: "Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where officials and capitalists were weighing and questioning the severity of COVID- 19 against the economic impact...",
         title: "The Revelations of COVID-19",
         thumbSrc: `/images/articles/coronavirus-thumb2.png`,
-        metaSrc: `images/articles/coronavirus-thumb.jpg`,
+        metaSrc: `/images/articles/coronavirus-thumb.jpg`,
         src: `/images/articles/coronavirus2.png`,
         date: `May 20, 2020`,
         body: (
