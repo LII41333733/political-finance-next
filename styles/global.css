@@ -4,6 +4,10 @@
     text-align: center;
 }
 
+.row {
+    margin: 0 !important;
+}
+
 @font-face {
     font-family: 'Schadow';
     font-stretch: condensed;
@@ -14,6 +18,8 @@ body {
     background: #e8e8c975 !important;
     margin: 0;
     padding: 0;
+    position: absolute;
+    width: 100vw;
 }
 
 .galleryCard {
@@ -59,10 +65,6 @@ body {
     justify-content: flex-end;
 }
 
-.container {
-    height: 100%;
-}
-
 .slimContain {
     padding: 0 200px !important;
 }
@@ -98,7 +100,7 @@ p, table, body {
 }
 
 .cover {
-    height: 400px;
+    height: 500px;
     position: relative;
     top: -100px;
     box-shadow: 14px 14px 12px #000000;
@@ -122,7 +124,7 @@ p, table, body {
     color: white;
     margin-bottom: 5rem !important;
     font-family: "Schadow";
-    height: 315px;
+    height: 400px;
     letter-spacing: 2px;
 }
 
@@ -132,7 +134,7 @@ p, table, body {
 
 .jumbotron h1 {
     font-size: 50px;
-    margin-left: 20px;
+    white-space: nowrap;
 }
 
 .jumbotron h2 {
@@ -322,6 +324,28 @@ h3 {
 }
 
 /********************************************************** Utility Classes */
+
+h1, h2, h3, h4, h5 {
+    margin: 0 !important;
+}
+
+.container {
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0 !important;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
 
 .not-allowed {
     cursor: not-allowed;
@@ -835,9 +859,23 @@ a:hover {
     padding-right: 15px !important;
 }
 
-@media only screen and (max-width: 960px) {
-    body, html {
-        max-width: 960px;
+/* ==================== DESKTOP TOGGLE  MEDIA QUERY */
+
+.mobile-jumbotron {
+    display: none;
+}
+
+.desktop-jumbotron, .hide-link {
+    display: flex;
+}
+
+/******************* PHONE *********************/
+
+@media only screen and (max-width: 992px) {
+    body {
+        width: 100%;
+        position: absolute;
+        display: flex !important;
     }
     .jumbo-homepage {
         height: inherit;
@@ -846,12 +884,6 @@ a:hover {
     }
     .cover {
         top: 0;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    body {
-        width: 576px;
     }
     .jumbo-homepage {
         height: inherit;
@@ -872,5 +904,12 @@ a:hover {
     }
     .modal-dialog.modal-lg {
         margin: 0 auto;
+    }
+    /* ==================== MOBILE TOGGLE  MEDIA QUERY */
+    .mobile-jumbotron {
+        display: block;
+    }
+    .desktop-jumbotron, .hide-link, .footer {
+        display: none !important;
     }
 }

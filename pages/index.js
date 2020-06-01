@@ -4,26 +4,10 @@ import Col from 'react-bootstrap/Col';
 import Head from 'next/head'
 import Button from 'react-bootstrap/Button';
 import JumbotronHomepage from '../components/jumbotrons/jumbotronHomepage';
+import MobileJumbotronHomepage from '../components/jumbotrons/mobileJumbotronHomepage';
 import HomepageCarousel from '../components/homepageCarousel';
 
-// const isMobile = window.innerWidth <= 960;
-
-
-Home.getInitialProps = async ({ req }) => {
-  let userAgent;
-  if (req) { // if you are on the server and you get a 'req' property from your context
-    userAgent = req.headers['user-agent'] // get the user-agent from the headers
-  } else {
-    userAgent = navigator.userAgent // if you are on the client you can access the navigator from the window object
-  }
-  let isMobile = Boolean(userAgent.match(
-    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-  ))
-
-  return { isMobile }
-}
-
-export default function Home({ isMobile }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -36,10 +20,8 @@ export default function Home({ isMobile }) {
         <meta property="og:image:height" content="199" />
         <meta property="og:url" content={`https://www.billpacello.com`} />
       </Head>
-      {isMobile
-        ? <MobileJumbotronHomepage />
-        : <JumbotronHomepage />
-      }
+      <MobileJumbotronHomepage />
+      <JumbotronHomepage />
       <Container>
         <Row className="mt-5">
           <Col
