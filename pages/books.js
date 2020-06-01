@@ -82,7 +82,7 @@ export default () => {
             extra={true} />;
 
     return (
-        <div>
+        <>
             <Head>
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" />
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css" />
@@ -113,14 +113,14 @@ export default () => {
                                 toggleBookModal(true)
                                 toggleWhichBook(1);
                             }}
-                            className="m-3 w-25"
+                            className="m-3 w-50"
                             variant="outline-dark">
                             Table of Contents</Button>
                         <a
                             target={"_blank"}
                             href="https://store.flpublishers.net/catalog/search?keyword=the+art+of+political+finance">
                             <Button
-                                className="m-2 w-25 buyButton inline">Click to Purchase</Button></a>
+                                className="m-2 w-50 buyButton inline">Click to Purchase</Button></a>
                     </Col>
                 </Row>
                 <Row className="px-5">
@@ -160,14 +160,14 @@ export default () => {
                                 toggleBookModal(true);
                                 toggleWhichBook(2);
                             }}
-                            className="m-3 w-25"
+                            className="m-3 w-50"
                             variant="outline-dark">
                             Table of Contents</Button>
                         <a
                             target={"_blank"}
                             href="https://store.flpublishers.net/catalog/search?keyword=the+art+of+political+finance">
                             <Button
-                                className="m-2 w-25 buyButton inline">Click to Purchase</Button></a>
+                                className="m-2 w-50 buyButton inline">Click to Purchase</Button></a>
                     </Col>
                 </Row>
                 <Row className="px-5">
@@ -185,6 +185,8 @@ export default () => {
                 show={showBookModal}
                 onHide={() => toggleBookModal(false)}
                 size={"lg"}>
+                <Modal.Header closeButton>
+                </Modal.Header>
                 <Modal.Body
                     className={"tocBody"}
                 >
@@ -202,6 +204,6 @@ export default () => {
                         <img className="galleryModalImg" src={fileName} alt={label} />}
                 </Modal.Body>
             </Modal>
-        </div >
+        </>
     )
 }

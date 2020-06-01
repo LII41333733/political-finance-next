@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 
 export default function App({ Component, pageProps }) {
     return (
-        <Container fluid>
+        <Container className="text-center" fluid>
             <Navigation />
             <Component {...pageProps} />
             <Footer />
