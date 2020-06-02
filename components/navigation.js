@@ -1,5 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import React from "react";
+import articles from "./data/articles"
 import Link from 'next/link'
 
 export default () => {
@@ -14,7 +15,7 @@ export default () => {
 
             <Link href="/tools"><a className={"pt-1 nav-link hide-link"}>Tools</a></Link>
 
-            <Link href="/articles"><a className={"pt-1 nav-link"}>Articles</a></Link>
+            <Link href={`/articles/${articles.length}`}><a className={"pt-1 nav-link"}>Articles</a></Link>
 
             <Link href="/iaq"><a className={"pt-1 nav-link hide-link"}>IAQs</a></Link>
 

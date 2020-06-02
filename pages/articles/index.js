@@ -5,6 +5,7 @@ import JumbotronDefault from "../../components/jumbotrons/jumbotronDefault";
 import articles from '../../components/data/articles'
 import { scrollToTop } from "../../components/utils/functions/scrollToTop"
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 Articles.getInitialProps = async ({ req }) => {
@@ -21,34 +22,35 @@ Articles.getInitialProps = async ({ req }) => {
     return { isMobile }
 }
 
-//525x150
 export default function Articles({ isMobile }) {
-    const [articleIndex, setArticleIndex] = useState(articles.length - 1);
+    const i = articles.length - 1
+    const [articleIndex, setArticleIndex] = useState(i);
     const articleSelected = articleIndex > -1;
-
     const RenderArticles = ({ articles }) => {
         return articles.map((a, i) => {
-            const { thumbSrc, title, date } = a;
-            return <div
-                onClick={() => setArticleIndex(i)}
-                key={i}
-                className="articleCard hoverZoom cursor m-2"
-                style={{
-                    backgroundImage: `url(${thumbSrc})`,
-                    backgroundSize: `cover`
-                }}>
-                <div className={"mb-2 px-2 articleCardInfo"}>
-                    <div className="articleCardItem articleCardDetails">{`Bill Pacello ● ${date}`}</div>
-                    <div className="articleCardItem articleCardTitle">{title}</div>
-                </div>
-            </div>
-
+            const { thumbSrc, title, date, id } = a;
+            return (
+                <Link href={`/articles/${id}`}>
+                    <div
+                        key={i}
+                        className="articleCard hoverZoom cursor m-2"
+                        style={{
+                            backgroundImage: `url(${thumbSrc})`,
+                            backgroundSize: `cover`
+                        }}>
+                        <div className={"mb-2 px-2 articleCardInfo"}>
+                            <div className="articleCardItem articleCardDetails">{`Bill Pacello ● ${date}`}</div>
+                            <div className="articleCardItem articleCardTitle">{title}</div>
+                        </div>
+                    </div>
+                </Link>
+            )
         })
     }
-
     const DisplayArticle = ({ articles, articleIndex }) => {
         const article = articles[articleIndex];
-        const { title, date, body, footer } = article;
+        const { title, date, body, footer, src, imageCaption } = article;
+        debugger;
         return (
             <div className={`${isMobile ? "p-3" : "slimContain"} articlesContainer`}>
                 <h2 className="textColorPrimary toolsTitle textCenter schadow">{title.toUpperCase()}</h2>
@@ -57,9 +59,12 @@ export default function Articles({ isMobile }) {
                     <p className={"d-inline"}>{date}</p>
                 </div>
                 <div>
-                    <img
-                        className={"articleImg"}
-                        src={article.src} />
+                    <div className="float-left">
+                        <img
+                            className={"articleImg"}
+                            src={src} />
+                        {imageCaption}
+                    </div>
                     {body}
                     {footer && <div className={"footerDash mt-5 mb-1"}></div>}
                     {footer}
@@ -67,7 +72,6 @@ export default function Articles({ isMobile }) {
             </div>
         )
     }
-    const i = articles.length - 1
     return (
         <>
             <Head>

@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import JumbotronDefault from "../components/jumbotrons/jumbotronDefault";
+import Link from "next/link";
 
 export default () =>
     <>
@@ -51,11 +52,14 @@ export default () =>
           Americans so that they may better understand the 21<sup>st</sup>-century bazaar, especially in an America with ratcheted
           discord after events like 911 and the “Great Recession” where each generation seems to be more apt to
 consumption and predation than the former.</p>
-                    <a
-                        target={"_blank"}
-                        href="#">
+                    <Link
+                        href={"/checkout"}
+                        as={"/checkout/donation"}>
                         <Button
-                            className="m-2 w-50 buyButton inline">Encourage and Support Independent Analysis</Button></a>
+                            className="m-2 w-50 buyButton inline">
+                            Encourage and Support Independent Analysis
+                            </Button>
+                    </Link>
                 </Col>
             </Row>
         </Container>

@@ -40,5 +40,12 @@ export default [{
     price: "3.50",
     href: "/images/lessons/7/7 Panic of 1837.pdf",
     src: "/images/lessons/7/thumb.png"
+},
+{
+    title: "The Panic of 1857",
+    price: "3.50",
+    href: "/images/lessons/8/8 Panic of 1857.pdf",
+    src: "/images/lessons/8/thumb.png"
 }
 ];
+

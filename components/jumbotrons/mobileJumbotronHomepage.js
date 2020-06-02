@@ -3,6 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Link from 'next/link'
 
 export default () =>
     <Jumbotron
@@ -10,11 +11,12 @@ export default () =>
         <Row>
             <Col
                 className="d-flex justify-content-center">
-                <img
-                    className="cover"
-                    src="images/book1/front1.jpg"
-                    alt="cover"
-                />
+                <Link href="/books">
+                    <img
+                        className="cover"
+                        src="images/book1/front1.jpg"
+                        alt="cover" />
+                </Link>
             </Col>
         </Row>
         <Row>
@@ -39,15 +41,12 @@ export default () =>
             <Col
                 className="d-flex justify-content-center"
                 lg={4}>
-                <img
-                    className="cover"
-                    src="images/book2/front1.jpg"
-                    alt="cover"
-                    onClick={() => changeRoute({
-                        page: "books",
-                        action: "bookScroll"
-                    })}
-                />
+                <Link href="/books">
+                    <img
+                        className="cover"
+                        src="images/book2/front1.jpg"
+                        alt="cover" />
+                </Link>
             </Col>
         </Row>
     </Jumbotron >

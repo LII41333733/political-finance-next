@@ -104,6 +104,7 @@ p, table, body {
     position: relative;
     top: -100px;
     box-shadow: 14px 14px 12px #000000;
+    cursor: pointer;
 }
 
 .cover-books {
@@ -808,7 +809,6 @@ a:hover {
     width: 400px;
     height: auto;
     text-align: left;
-    float: left;
     margin: 0 15px 15px 0;
 }
 
@@ -901,6 +901,7 @@ a:hover {
     }
     body .modal-backdrop {
         width: 100% !important;
+        height: 1000vh !important;
     }
     .modal-dialog.modal-lg {
         margin: 0 auto;
@@ -909,7 +910,7 @@ a:hover {
     .mobile-jumbotron {
         display: block;
     }
-    .desktop-jumbotron, .hide-link, .footer {
+    .desktop-jumbotron, .hide-link, .footer, .upBtnCircle {
         display: none !important;
     }
 }

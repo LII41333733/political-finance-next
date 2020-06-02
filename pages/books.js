@@ -185,8 +185,7 @@ export default () => {
                 show={showBookModal}
                 onHide={() => toggleBookModal(false)}
                 size={"lg"}>
-                <Modal.Header closeButton>
-                </Modal.Header>
+                <Modal.Header closeButton></Modal.Header>
                 <Modal.Body
                     className={"tocBody"}
                 >
