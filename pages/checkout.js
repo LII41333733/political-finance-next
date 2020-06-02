@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import RenderCheckoutCard from "../Components/checkout/RenderCheckoutCard";
-import JumbotronDefault from "../Components/Jumbotrons/JumbotronDefault"
-import EmailComponent from "../Components/checkout/EmailComponent"
+import RenderCheckoutCard from "../components/checkout/renderCheckoutCard";
+import JumbotronDefault from "../components/jumbotrons/jumbotronDefault"
+import EmailComponent from "../components/checkout/emailComponent"
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card';
 import Link from "next/link";
