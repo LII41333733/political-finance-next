@@ -19,6 +19,7 @@ export default function Home() {
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="199" />
         <meta property="og:url" content={`https://www.billpacello.com`} />
+        <meta property="og:type" content="website" />
       </Head>
       <MobileJumbotronHomepage />
       <JumbotronHomepage />
