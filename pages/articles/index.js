@@ -84,6 +84,7 @@ export default function Articles({ isMobile }) {
                 <meta property="og:image:height" content="628" />
                 <meta property="og:url" content={`https://www.billpacello.com/articles`} />
                 <meta property="og:type" content="website" />
+                <link rel="icon" type="image/x-icon" href="https://www.billpacello.com/favicon.ico" />
             </Head>
             <JumbotronDefault title={"Articles"} />
             <Container
