@@ -56,7 +56,7 @@ consumption and predation than the former.</p>
                         href={"/checkout"}
                         as={"/checkout/donation"}>
                         <Button
-                            className="m-2 w-50 buyButton inline">
+                            className="m-2 w-75 buyButton inline">
                             Encourage and Support Independent Analysis
                             </Button>
                     </Link>
