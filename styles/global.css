@@ -913,4 +913,7 @@ a:hover {
     .desktop-jumbotron, .hide-link, .footer, .upBtnCircle {
         display: none !important;
     }
+    .slimContain {
+        padding: initial !important;
+    }
 }

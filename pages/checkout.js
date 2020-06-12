@@ -61,7 +61,10 @@ export default () => {
 
         //sand
         // script.src = `https://www.paypal.com/sdk/js?client-id=AZILohc0HD2gaHUBuQyBd94qxd5D9z4tSjH0BvEAXWqgKxwLAfiT0-dHIAB1DoxWTAN-LIH0YiAFzQyg`;
-        script.addEventListener("load", () => setLoaded(true));
+        script.addEventListener("load", () => {
+            setLoaded(true);
+            makeNewChildren();
+        });
         document.body.appendChild(script);
     }
     const formatAMPM = (date) => {
@@ -168,7 +171,9 @@ export default () => {
                                     variant={"dark"}
                                     size="sm"
                                     className={" mt-3 checkoutBtnDownload w-80 not-allowed"}
-                                    onClick={() => setPayPalContinue(true)}>
+                                    onClick={() => {
+                                        setPayPalContinue(true);
+                                    }}>
                                     {"Continue to Pay"}
                                 </Button>
                             </div>
@@ -212,18 +217,17 @@ export default () => {
     }
 
     error !== null && alert(error);
-    loaded && paypalRef.current && paypalRef.current.childNodes.length < 1 && makeNewChildren();
+    loaded && paypalRef.current && makeNewChildren();
+    // paypalRef.current.childNodes.length < 1
 
     useEffect(() => {
-        const action =
+        if (!paypalContinue) {
             window.location.href.split("/").includes("donation")
-                ? "donation"
+                ? setAction("donation")
                 : getData()
-
-        if (((action !== "donation") || (paypalContinue && !showConfirmation))) {
-            loadPaypalScript();
         }
-    }, [action]);
+        paypalContinue && loadPaypalScript();
+    });
 
     return (
         <>

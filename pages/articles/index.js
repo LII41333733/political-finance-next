@@ -50,7 +50,6 @@ export default function Articles({ isMobile }) {
     const DisplayArticle = ({ articles, articleIndex }) => {
         const article = articles[articleIndex];
         const { title, date, body, footer, src, imageCaption } = article;
-        debugger;
         return (
             <div className={`${isMobile ? "p-3" : "slimContain"} articlesContainer`}>
                 <h2 className="textColorPrimary toolsTitle textCenter schadow">{title.toUpperCase()}</h2>
