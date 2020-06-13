@@ -746,6 +746,14 @@ a:hover {
     border: 3px solid #173041;
 }
 
+.printThis {
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .toolCard {
     max-width: 275px !important;
     border: 1px solid #173041;
