@@ -215,8 +215,7 @@ export default [
                 owners, also known
                 euphemistically as “managers,” like JP Morgan and Jay Gould had on farmers due to the high prices of
                 transportation resulting from cartelization. In the late 19th century railroads became so prolific, partly due to the
-                hard work and productivity of Americans, that the cost of a rail ticket was declining based on the NATURAL
-                LAW of price = supply + demand. Railroad owners didn’t accept this law, so they entered into agreements to
+                hard work and productivity of Americans, that the cost of a rail ticket was declining based on the NATURAL LAW of price = demand/supply. Railroad owners didn’t accept this law, so they entered into agreements to
                 consolidate roads and set prices. This of course was business as usual for industrial capitalists who made their
                 own rules. Rather than create legislation that prohibited these agreements and trusts, most government officials
                 participated via subsidizing these roads. This stance was in direct opposition to the laissez-faire approach to
