@@ -21,11 +21,11 @@ export default () => {
 
                     {timelineIndex === -1
                         ? <>
-                            <p>Timelines can be downloaded for wide format printing for the classroom or the wall at 300 dpi.</p>
                             <RenderTimelineCards
                                 onClick={setTimelineIndex} />
                             <a target="_blank" href="https://store.printthisforme.com"><img className="printThis mt-5" src={"../images/printthis.jpg"} /></a>
                             <p>is a full service online print and design company that specializes in full color offset and digital printing. <br /> Please feel free to pay their site a visit for any media printing inquiries.</p>
+                            <p>Timelines can be downloaded for wide format printing for the classroom or the wall at 300 dpi.</p>
                         </>
                         : <>
                             <BackButton
