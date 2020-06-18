@@ -326,6 +326,14 @@ h3 {
 
 /********************************************************** Utility Classes */
 
+a {
+    color: #173041 !important;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 h1, h2, h3, h4, h5 {
     margin: 0 !important;
 }
@@ -740,6 +748,13 @@ a:hover {
     font-weight: 800;
     margin-top: -5.6px;
     margin-left: 1px;
+}
+
+/**Timelines**/
+
+.printDiv {
+    width: 782px;
+    margin: 0 auto;
 }
 
 .timeline {
