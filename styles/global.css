@@ -326,10 +326,6 @@ h3 {
 
 /********************************************************** Utility Classes */
 
-a {
-    color: #173041 !important;
-}
-
 .underline {
     text-decoration: underline;
 }
@@ -751,6 +747,10 @@ a:hover {
 }
 
 /**Timelines**/
+
+.printForMe {
+    color: #173040;
+}
 
 .printDiv {
     width: 782px;

@@ -64,8 +64,10 @@ export default () => {
         script.addEventListener("load", () => {
             setLoaded(true);
             makeNewChildren();
+
         });
         document.body.appendChild(script);
+
     }
     const formatAMPM = (date) => {
         var hours = date.getHours();
@@ -217,8 +219,9 @@ export default () => {
     }
 
     error !== null && alert(error);
-    loaded && paypalRef.current && makeNewChildren();
-    // paypalRef.current.childNodes.length < 1
+    loadPaypalScript();
+
+
 
     useEffect(() => {
         if (!paypalContinue) {
@@ -226,7 +229,6 @@ export default () => {
                 ? setAction("donation")
                 : getData()
         }
-        paypalContinue && loadPaypalScript();
     });
 
     return (

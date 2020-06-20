@@ -46,7 +46,7 @@ export default () => {
                     }
                     <div className="printDiv">
                         <a target="_blank" href="https://store.printthisforme.com"><img className="printThis mt-5" src={"../images/printthis.jpg"} /></a>
-                        <p className={"textLeft"}><a className={"underline"} target="_blank" href="https://store.printthisforme.com">Print This For Me</a> is a full service online print and design company that specializes in full color offset and digital printing.</p>
+                        <p className={"textLeft"}><a className={"printForMe underline"} target="_blank" href="https://store.printthisforme.com">Print This For Me</a> is a full service online print and design company that specializes in full color offset and digital printing.</p>
                         <p className={"textLeft"}>Timelines can be downloaded for wide format printing for the classroom or the wall at 300 dpi.</p>
                         <p className={"textLeft"}> Please feel free to pay their site a visit for any media printing inquiries.</p>
                     </div>
