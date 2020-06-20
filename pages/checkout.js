@@ -14,7 +14,7 @@ import lessonPlans from "../components/data/lessonPlans"
 
 export default () => {
     const [action, setAction] = useState(null);
-    // const [loaded, setLoaded] = useState(false);
+    const [loaded, setLoaded] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
     const [error, setError] = useState(null);
     const [paypalContinue, setPayPalContinue] = useState(false);
@@ -43,7 +43,7 @@ export default () => {
                     const order = await actions.order.capture();
                     setOrderDetails(order)
                     setShowConfirmation(true);
-                    // setLoaded(false);
+                    setLoaded(false);
                 },
                 onError: err => {
                     setError(err);
@@ -52,23 +52,7 @@ export default () => {
             })
             .render(paypalRef.current);
     }
-    const loadPaypalScript = () => {
-        const script = document.createElement("script");
 
-        // live
-        script.src = `https://www.paypal.com/sdk/js?client-id=AXjc_WlhpGSk4-4cIFxadDfdV1OPzOtLuZKRJ7iaCUSjFEGyzJSj178EztDKesH72lul9D8OxZZQajXo`;
-
-        //sand
-        // script.src = `https://www.paypal.com/sdk/js?client-id=AZILohc0HD2gaHUBuQyBd94qxd5D9z4tSjH0BvEAXWqgKxwLAfiT0-dHIAB1DoxWTAN-LIH0YiAFzQyg`;
-
-        script.addEventListener("load", () => {
-            // setLoaded(true);
-            makeNewChildren();
-
-        });
-        document.body.appendChild(script);
-
-    }
     const formatAMPM = (date) => {
         var hours = date.getHours();
         var minutes = date.getMinutes();
@@ -219,7 +203,7 @@ export default () => {
     }
 
     error !== null && alert(error);
-
+    loaded && makeNewChildren();
 
 
     useEffect(() => {
@@ -228,7 +212,20 @@ export default () => {
                 ? setAction("donation")
                 : getData()
         }
-        loadPaypalScript();
+
+        const script = document.createElement("script");
+
+        // live
+        script.src = `https://www.paypal.com/sdk/js?client-id=AXjc_WlhpGSk4-4cIFxadDfdV1OPzOtLuZKRJ7iaCUSjFEGyzJSj178EztDKesH72lul9D8OxZZQajXo`;
+
+        //sand
+        // script.src = `https://www.paypal.com/sdk/js?client-id=AZILohc0HD2gaHUBuQyBd94qxd5D9z4tSjH0BvEAXWqgKxwLAfiT0-dHIAB1DoxWTAN-LIH0YiAFzQyg`;
+
+        script.addEventListener("load", () => {
+            setLoaded(true);
+
+        });
+        document.body.appendChild(script);
     }, []);
 
     return (
