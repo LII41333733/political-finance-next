@@ -229,7 +229,7 @@ export default () => {
                 : getData()
         }
         loadPaypalScript();
-    });
+    }, []);
 
     return (
         <>
