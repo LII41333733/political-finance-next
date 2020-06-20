@@ -14,7 +14,7 @@ import lessonPlans from "../components/data/lessonPlans"
 
 export default () => {
     const [action, setAction] = useState(null);
-    const [loaded, setLoaded] = useState(false);
+    // const [loaded, setLoaded] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
     const [error, setError] = useState(null);
     const [paypalContinue, setPayPalContinue] = useState(false);
@@ -24,7 +24,6 @@ export default () => {
     const [orderDetails, setOrderDetails] = useState(null);
     const paypalRef = useRef();
     const makeNewChildren = () => {
-        paypalRef.current.innerHTML = '';
         window.paypal
             .Buttons({
                 createOrder: (data, actions) => {
@@ -44,7 +43,7 @@ export default () => {
                     const order = await actions.order.capture();
                     setOrderDetails(order)
                     setShowConfirmation(true);
-                    setLoaded(false);
+                    // setLoaded(false);
                 },
                 onError: err => {
                     setError(err);
@@ -61,11 +60,12 @@ export default () => {
 
         //sand
         // script.src = `https://www.paypal.com/sdk/js?client-id=AZILohc0HD2gaHUBuQyBd94qxd5D9z4tSjH0BvEAXWqgKxwLAfiT0-dHIAB1DoxWTAN-LIH0YiAFzQyg`;
-        script.addEventListener("load", () => {
-            setLoaded(true);
-            makeNewChildren();
-        });
 
+        script.addEventListener("load", () => {
+            // setLoaded(true);
+            makeNewChildren();
+
+        });
         document.body.appendChild(script);
 
     }

@@ -52,11 +52,6 @@ export default [{
     price: "3.50",
     href: "/images/lessons/9/9 Financing The Civil War.pdf",
     src: "/images/lessons/9/runningTheMachine.jpg"
-}, {
-    title: "Financing the Civil War",
-    price: "3.50",
-    href: "/images/lessons/9/9 Financing The Civil War.pdf",
-    src: "/images/lessons/9/runningTheMachine.jpg"
 }
 ];
 
