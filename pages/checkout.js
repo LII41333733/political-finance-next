@@ -64,8 +64,8 @@ export default () => {
         script.addEventListener("load", () => {
             setLoaded(true);
             makeNewChildren();
-
         });
+
         document.body.appendChild(script);
 
     }
