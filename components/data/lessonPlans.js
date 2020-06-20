@@ -52,6 +52,12 @@ export default [{
     price: "3.50",
     href: "/images/lessons/9/9 Financing The Civil War.pdf",
     src: "/images/lessons/9/runningTheMachine.jpg"
+},
+{
+    title: "Gold, Greenbacks, and Bonds",
+    price: "3.50",
+    href: "/images/lessons/10/10 Gold, Greenbacks, and Bonds.pdf",
+    src: "/images/lessons/10/Gold GB Bonds.jpg"
 }
 ];
 
