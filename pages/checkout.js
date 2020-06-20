@@ -219,7 +219,6 @@ export default () => {
     }
 
     error !== null && alert(error);
-    loadPaypalScript();
 
 
 
@@ -229,6 +228,7 @@ export default () => {
                 ? setAction("donation")
                 : getData()
         }
+        loadPaypalScript();
     });
 
     return (
