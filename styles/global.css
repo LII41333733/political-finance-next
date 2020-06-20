@@ -757,6 +757,11 @@ a:hover {
     margin: 0 auto;
 }
 
+.lessonDescDiv {
+    width: 675px;
+    margin: 0 auto;
+}
+
 .timeline {
     border: 3px solid #173041;
 }
