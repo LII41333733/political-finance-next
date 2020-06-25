@@ -5,11 +5,46 @@ import JumbotronDefault from "../../components/jumbotrons/jumbotronDefault";
 import articles from '../../components/data/articles'
 import { scrollToTop } from "../../components/utils/functions/scrollToTop"
 import Head from 'next/head'
-import Link from "next/link"
+import Link from "next/link";
+
+const client = require('contentful').createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+})
 
 //525x150
 export default function Articles() {
+    async function fetchEntries() {
+        const entries = await client.getEntries()
+        if (entries.items) return entries.items
+        console.log(`Error getting Entries for ${contentType.name}.`)
+    }
+
     const [articleIndex, setArticleIndex] = useState(null);
+    const [posts, setPosts] = useState([])
+
+    if (posts.length > 0) {
+        console.log(posts)
+        debugger;
+    }
+
+    useEffect(() => {
+        async function getPosts() {
+            const allPosts = await fetchEntries()
+            setPosts([...allPosts])
+        }
+        getPosts()
+
+
+
+        const index = window.location.href.split("/").reverse()[0];
+        setArticleIndex(parseInt(index) - 1);
+    }, [articleIndex]);
+
+
+
+
+
     const RenderArticles = ({ articles }) => {
         return articles.map((a, i) => {
             const { thumbSrc, title, date } = a;
@@ -58,10 +93,7 @@ export default function Articles() {
         )
     }
 
-    useEffect(() => {
-        const index = window.location.href.split("/").reverse()[0];
-        setArticleIndex(parseInt(index) - 1);
-    }, [articleIndex]);
+
 
     return (
         <>

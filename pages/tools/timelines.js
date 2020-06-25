@@ -18,7 +18,7 @@ export default () => {
             <Row>
                 <Col>
                     <h2 className="textColorPrimary schadow mt-3">TIMELINES</h2>
-
+                    <p className="textLeft printDiv">You can purchase and download a timeline for large format printing for the classroom or the wall at 300 dpi by clicking on a specific Timeline. You may also visit <a className={"printForMe underline"} target="_blank" href="https://store.printthisforme.com">Printhisforme</a> to receive a quote for printing the timelines on different media.</p>
                     {timelineIndex === -1
                         ? <>
                             <RenderTimelineCards
@@ -46,9 +46,8 @@ export default () => {
                     }
                     <div className="printDiv">
                         <a target="_blank" href="https://store.printthisforme.com"><img className="printThis mt-5" src={"../images/printthis.jpg"} /></a>
-                        <p className={"textLeft"}><a className={"printForMe underline"} target="_blank" href="https://store.printthisforme.com">Print This For Me</a> is a full service online print and design company that specializes in full color offset and digital printing.</p>
-                        <p className={"textLeft"}>Timelines can be downloaded for wide format printing for the classroom or the wall at 300 dpi.</p>
-                        <p className={"textLeft"}> Please feel free to pay their site a visit for any media printing inquiries.</p>
+                        <p className={"textLeft"}><a className={"printForMe underline"} target="_blank" href="https://store.printthisforme.com">Print This For Me</a> is a full-service online print and design company that specializes in full-color offset and digital printing.</p>
+                        <p className={"textLeft"}> Please feel free to visit their site for these and any printing inquiries.</p>
                     </div>
                 </Col>
             </Row>
