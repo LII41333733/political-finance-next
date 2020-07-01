@@ -7,18 +7,18 @@ import { scrollToTop } from "../../components/utils/functions/scrollToTop"
 import Head from 'next/head'
 import Link from "next/link";
 
-const client = require('contentful').createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-})
+//const client = require('contentful').createClient({
+//     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+// })
 
 //525x150
 export default function Articles() {
-    async function fetchEntries() {
-        const entries = await client.getEntries()
-        if (entries.items) return entries.items
-        console.log(`Error getting Entries for ${contentType.name}.`)
-    }
+    // async function fetchEntries() {
+    //     const entries = await client.getEntries()
+    //     if (entries.items) return entries.items
+    //     console.log(`Error getting Entries for ${contentType.name}.`)
+    // }
 
     const [articleIndex, setArticleIndex] = useState(null);
     const [posts, setPosts] = useState([])
@@ -29,11 +29,11 @@ export default function Articles() {
     }
 
     useEffect(() => {
-        async function getPosts() {
-            const allPosts = await fetchEntries()
-            setPosts([...allPosts])
-        }
-        getPosts()
+        // async function getPosts() {
+        //     const allPosts = await fetchEntries()
+        //     setPosts([...allPosts])
+        // }
+        // getPosts()
 
 
 
