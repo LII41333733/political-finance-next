@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import JumbotronDefault from "../../components/jumbotrons/jumbotronDefault";
 import articles from '../../components/data/articles'
-import { scrollToTop } from "../../components/utils/functions/scrollToTop"
+import { scrollToTop, scrollToArticle } from "../../components/utils/functions/scrollToTop"
 import Head from 'next/head'
 import Link from "next/link";
 
@@ -35,7 +35,7 @@ export default function Articles() {
         // }
         // getPosts()
 
-
+        scrollToArticle();
 
         const index = window.location.href.split("/").reverse()[0];
         setArticleIndex(parseInt(index) - 1);
