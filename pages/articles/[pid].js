@@ -20,7 +20,7 @@ export default function Articles() {
     //     console.log(`Error getting Entries for ${contentType.name}.`)
     // }
 
-    const [articleIndex, setArticleIndex] = useState(null);
+    const [articleIndex, setArticleIndex] = useState(articles.length - 1);
     const [posts, setPosts] = useState([])
 
     if (posts.length > 0) {
@@ -96,46 +96,40 @@ export default function Articles() {
         )
     }
 
-
-
     return (
         <>
-            {articleIndex !== null &&
-                <>
-                    <Head prefetch={false}>
-                        <title>{articles[articleIndex].title}</title>
-                        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                        <meta property="og:title" content={articles[articleIndex].title} />
-                        <meta property="og:description" content={articles[articleIndex].short} />
-                        <meta property="og:image" content={articles[articleIndex].metaSrc} />
-                        <meta property="og:image:width" content="1200" />
-                        <meta property="og:image:height" content="628" />
-                        <meta property="og:url" content={`https://www.billpacello.com/articles/${articleIndex}`} />
-                        <meta property="og:type" content="website" />
-                    </Head>
-                    <JumbotronDefault title={"Articles"} />
-                    <Container
-                        className={`container-body`}
-                        style={{ paddingBottom: "50px" }}>
-                        <Row style={{ justifyContent: "center" }}>
-                            <RenderArticles
-                                articles={articles} />
-                        </Row>
-                        <hr className="hr0" />
-                        <hr className="hr1" />
-                        <div
-                            className="upBtnCircle cursor"
-                            onClick={scrollToTop}>
-                            <span className="upArrow">↑</span>
-                        </div>
-                        <Row>
-                            <DisplayArticle
-                                articles={articles}
-                                articleIndex={articleIndex} />
-                        </Row>
-                    </Container>
-                </>
-            }
+            <Head>
+                <title>{articles[articleIndex].title}</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta property="og:title" content={articles[articleIndex].title} />
+                <meta property="og:description" content={articles[articleIndex].short} />
+                <meta property="og:image" content={articles[articleIndex].metaSrc} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="628" />
+                <meta property="og:url" content={`https://www.billpacello.com/articles/${articleIndex}`} />
+                <meta property="og:type" content="website" />
+            </Head>
+            <JumbotronDefault title={"Articles"} />
+            <Container
+                className={`container-body`}
+                style={{ paddingBottom: "50px" }}>
+                <Row style={{ justifyContent: "center" }}>
+                    <RenderArticles
+                        articles={articles} />
+                </Row>
+                <hr className="hr0" />
+                <hr className="hr1" />
+                <div
+                    className="upBtnCircle cursor"
+                    onClick={scrollToTop}>
+                    <span className="upArrow">↑</span>
+                </div>
+                <Row>
+                    <DisplayArticle
+                        articles={articles}
+                        articleIndex={articleIndex} />
+                </Row>
+            </Container>
         </>
     )
 }
