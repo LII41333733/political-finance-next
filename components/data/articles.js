@@ -407,6 +407,7 @@ the general welfare.</em></p>
                 the area where it was invented. After the product becomes adopted and used in the world markets, production
                 gradually moves away from the point of origin. In some situations, the product becomes an item that is imported
 by its original country of invention.<sup>i</sup></p>
+                <p><img src={"https://www.billpacello.com/images/articles/ag1.png"} /></p>
                 <p>Some of you may be familiar with the graph of the product lifecycle. The first image shows how a product goes
                 through the stages from the perspective of manufacturing. The second shows the stages of the product by way
                 of consumption. We cannot marginalize the
@@ -439,6 +440,7 @@ by its original country of invention.<sup>i</sup></p>
                 Civil Service reform aimed at radical Republicans who rode the four horsemen of civilization—a lawyer, a
                 politician, a policeman, and a tax collectorii— roughshod over a nation of “humble members of society” in what’s
 sometimes referred to as the Second American System.</p>
+                <p><img src={"https://www.billpacello.com/images/articles/ag2.png"} /></p>
                 <p>
                     Let’s switch gears using the second graphic
                     as a representation of the product lifecycle
@@ -478,6 +480,7 @@ sometimes referred to as the Second American System.</p>
                     apply the same model to pharmaceuticals. Does the litigation kick in after saturation? Here is a partial list of
                     lawsuits against certain medications according to Enjuris.com and Wikipedia.
                 </p>
+                <p><img src={"https://www.billpacello.com/images/articles/ag3.png"} /></p>
                 <p>
                     There are plenty of improvements to be made in this country and plenty of work to be done. Some of us can
                     recognize it right outside our window. Where is the money and the will to get it done? If you read my article
