@@ -6,6 +6,18 @@ import articles from '../../components/data/articles'
 import { scrollToTop, scrollToArticle } from "../../components/utils/functions/scrollToTop"
 import Head from 'next/head'
 import Link from "next/link";
+import 'isomorphic-unfetch';
+import { useRouter } from 'next/router'
+
+Articles.getInitialProps = async ({ req }) => {
+
+    console.log(`------------------`)
+    const reqString = req.headers.referer.split("/");
+    const reqIndex = reqString[reqString.length - 1] - 1
+    console.log(reqIndex)
+
+    return { reqIndex }
+}
 
 //const client = require('contentful').createClient({
 //     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -13,14 +25,14 @@ import Link from "next/link";
 // })
 
 //525x150
-export default function Articles() {
+export default function Articles({ reqIndex }) {
     // async function fetchEntries() {
     //     const entries = await client.getEntries()
     //     if (entries.items) return entries.items
     //     console.log(`Error getting Entries for ${contentType.name}.`)
     // }
 
-    const [articleIndex, setArticleIndex] = useState(articles.length - 1);
+    const [articleIndex, setArticleIndex] = useState(reqIndex);
     const [posts, setPosts] = useState([])
 
     if (posts.length > 0) {
@@ -96,17 +108,19 @@ export default function Articles() {
         )
     }
 
+    //const startIndex = window.location.href.split("/").reverse()[0] - 1;
+
     return (
         <>
             <Head>
-                <title>{articles[articleIndex].title}</title>
+                <title>{articles[reqIndex].title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta property="og:title" content={articles[articleIndex].title} />
-                <meta property="og:description" content={articles[articleIndex].short} />
-                <meta property="og:image" content={articles[articleIndex].metaSrc} />
+                <meta property="og:title" content={articles[reqIndex].title} />
+                <meta property="og:description" content={articles[reqIndex].short} />
+                <meta property="og:image" content={articles[reqIndex].metaSrc} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="628" />
-                <meta property="og:url" content={`https://www.billpacello.com/articles/${articleIndex}`} />
+                <meta property="og:url" content={`https://www.billpacello.com/articles/${reqIndex}`} />
                 <meta property="og:type" content="website" />
             </Head>
             <JumbotronDefault title={"Articles"} />
