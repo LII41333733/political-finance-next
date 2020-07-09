@@ -10,10 +10,12 @@ import 'isomorphic-unfetch';
 import { useRouter } from 'next/router'
 
 Articles.getInitialProps = async ({ req }) => {
-    if (req) {
+    if (req.headers.referer) {
         const reqString = req.headers.referer.split("/");
         const reqIndex = reqString[reqString.length - 1];
         return { reqIndex }
+    } else {
+        return { reqIndex: 1 }
     }
 }
 
@@ -23,7 +25,7 @@ Articles.getInitialProps = async ({ req }) => {
 // })
 
 //525x150
-export default function Articles({ reqIndex = 0 }) {
+export default function Articles({ reqIndex = 1 }) {
     // async function fetchEntries() {
     //     const entries = await client.getEntries()
     //     if (entries.items) return entries.items
