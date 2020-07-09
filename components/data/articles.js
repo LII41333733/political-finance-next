@@ -493,8 +493,6 @@ sometimes referred to as the Second American System.</p>
         id: 6,
         footer: (
             <>
-                <p><sup>i</sup> Madrick, Jeff.“How the Invisible Hand Was Corrupted by Laissez- Faire Economics.” <em>Evonomics</em>, 3 May 2018</p>
-
                 <p><sup>i</sup> Hill, Charles(2007).International Business Competing in the Global Marketplace 6th ed.McGraw - Hill.pp. 168. ISBN 978-0 - 07 -
             310255 - 9.</p>
 
