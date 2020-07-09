@@ -10,9 +10,11 @@ import 'isomorphic-unfetch';
 import { useRouter } from 'next/router'
 
 Articles.getInitialProps = async ({ req }) => {
-    const reqString = req.headers.referer.split("/");
-    const reqIndex = reqString[reqString.length - 1];
-    return { reqIndex }
+    if (req) {
+        const reqString = req.headers.referer.split("/");
+        const reqIndex = reqString[reqString.length - 1];
+        return { reqIndex }
+    }
 }
 
 //const client = require('contentful').createClient({
