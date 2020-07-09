@@ -437,7 +437,7 @@ by its original country of invention.<sup>i</sup></p>
                 billed as a politically incorrect exodus, it was partially spurred on by high taxes due to high administration costs.
                 This is nothing new, it has been happening since the Civil War. After the Northern victory there were calls for
                 Civil Service reform aimed at radical Republicans who rode the four horsemen of civilization—a lawyer, a
-                politician, a policeman, and a tax collectorii— roughshod over a nation of “humble members of society” in what’s
+                politician, a policeman, and a tax collector<sup>ii</sup> — roughshod over a nation of “humble members of society” in what’s
 sometimes referred to as the Second American System.</p>
                 <p className={"text-center"}><img src={"https://www.billpacello.com/images/articles/ag2.png"} /></p>
                 <p>
@@ -460,7 +460,7 @@ sometimes referred to as the Second American System.</p>
                     homesteaders, for a national currency, and for a protective tariff.<sup>iii</sup> This was a relatively radical program for
                     expanding federal power considering the generally anti-federalist approach during the antebellum period. It
                     was mercantilist, aimed to get farmers and ordinary citizens to buy into it with the Homestead Act and the
-                    establishment of state universities, and generally Democrats opposed it.iv Along with the state universities, many
+                    establishment of state universities, and generally Democrats opposed it.<sup>iv</sup> Along with the state universities, many
                     private universities were established in a period of great production and in support of the namesakes’ interests;
 
                     Colgate University-William Colgate (1819), Duke University-James Buchanan Duke (1838), Wharton School-
@@ -493,12 +493,11 @@ sometimes referred to as the Second American System.</p>
         id: 6,
         footer: (
             <>
-                <p><sup>i</sup> Hill, Charles(2007).International Business Competing in the Global Marketplace 6th ed.McGraw - Hill.pp. 168. ISBN 978-0 - 07 -
-            310255 - 9.</p>
+                <p><sup>i</sup> Hill, Charles (2007). <em>International Business Competing in the Global Marketplace 6th ed.</em> McGraw-Hill. pp. 168. ISBN 978-0-07-310255-9.</p>
 
-                <p><sup>ii</sup> “Escape from the Garden.“ Hell on Wheels.AMC. 2014.</p>
+                <p><sup>ii</sup> “Escape from the Garden.“ Hell on Wheels. AMC. 2014.</p>
 
-                <p><sup>iii</sup> Rauchway, Eric, When and(to an extent) why did the parties switch places, May 20, 2010. <a target={"_blank"} href={"https://www.chronicle.com/blognetwork/edgeofthewest/2010/05/20/when-and-to-an-extent-why-did-the-parties-switch-places/"}>https://www.chronicle.com/blognetwork/edgeofthewest/2010/05/20/when-and-to-an-extent-why-did-the-parties-switch-places/</a>.
+                <p><sup>iii</sup> Rauchway, Eric, When and (to an extent) why did the parties switch places, May 20, 2010. <a target={"_blank"} href={"https://www.chronicle.com/blognetwork/edgeofthewest/2010/05/20/when-and-to-an-extent-why-did-the-parties-switch-places/"}>https://www.chronicle.com/blognetwork/edgeofthewest/2010/05/20/when-and-to-an-extent-why-did-the-parties-switch-places/</a>.
 </p>
                 <p><sup>iv</sup> Ibid.</p>
             </>
