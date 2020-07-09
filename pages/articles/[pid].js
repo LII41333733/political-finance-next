@@ -15,7 +15,7 @@ Articles.getInitialProps = async ({ req }) => {
         const reqIndex = reqString[reqString.length - 1];
         return { reqIndex }
     } else {
-        return { reqIndex: 1 }
+        return { reqIndex: 6 }
     }
 }
 
@@ -25,7 +25,7 @@ Articles.getInitialProps = async ({ req }) => {
 // })
 
 //525x150
-export default function Articles({ reqIndex = 1 }) {
+export default function Articles({ reqIndex = 6 }) {
     // async function fetchEntries() {
     //     const entries = await client.getEntries()
     //     if (entries.items) return entries.items
