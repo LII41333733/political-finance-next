@@ -10,12 +10,8 @@ import 'isomorphic-unfetch';
 import { useRouter } from 'next/router'
 
 Articles.getInitialProps = async ({ req }) => {
-
-    console.log(`------------------`)
     const reqString = req.headers.referer.split("/");
-    const reqIndex = reqString[reqString.length - 1] - 1
-    console.log(reqIndex)
-
+    const reqIndex = reqString[reqString.length - 1];
     return { reqIndex }
 }
 
@@ -25,32 +21,25 @@ Articles.getInitialProps = async ({ req }) => {
 // })
 
 //525x150
-export default function Articles({ reqIndex }) {
+export default function Articles({ reqIndex = 0 }) {
     // async function fetchEntries() {
     //     const entries = await client.getEntries()
     //     if (entries.items) return entries.items
     //     console.log(`Error getting Entries for ${contentType.name}.`)
     // }
 
-    const [articleIndex, setArticleIndex] = useState(reqIndex);
-    const [posts, setPosts] = useState([])
+    const [articleIndex, setArticleIndex] = useState(parseInt(reqIndex - 1));
+    // const [posts, setPosts] = useState([])
 
-    if (posts.length > 0) {
-        console.log(posts)
-        debugger;
-    }
+    // if (posts.length > 0) {
+    //     console.log(posts)
+    //     debugger;
+    // }
 
     useEffect(() => {
-        // async function getPosts() {
-        //     const allPosts = await fetchEntries()
-        //     setPosts([...allPosts])
-        // }
-        // getPosts()
-
         scrollToArticle();
+        setArticleIndex(window.location.href.split("/").reverse()[0] - 1);
 
-        const index = window.location.href.split("/").reverse()[0];
-        setArticleIndex(parseInt(index) - 1);
     }, [articleIndex]);
 
 
@@ -63,7 +52,8 @@ export default function Articles({ reqIndex }) {
             return (
                 <Link
                     key={title}
-                    href={`/articles/${i + 1}`}>
+                    href={`/articles/${i + 1}`}
+                    as={`/articles/${i + 1}`}>
                     <div
                         key={i}
                         className="articleCard hoverZoom cursor m-2"
@@ -108,19 +98,17 @@ export default function Articles({ reqIndex }) {
         )
     }
 
-    //const startIndex = window.location.href.split("/").reverse()[0] - 1;
-
     return (
         <>
             <Head>
-                <title>{articles[reqIndex].title}</title>
+                <title>{articles[articleIndex].title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta property="og:title" content={articles[reqIndex].title} />
-                <meta property="og:description" content={articles[reqIndex].short} />
-                <meta property="og:image" content={articles[reqIndex].metaSrc} />
+                <meta property="og:title" content={articles[articleIndex].title} />
+                <meta property="og:description" content={articles[articleIndex].short} />
+                <meta property="og:image" content={articles[articleIndex].metaSrc} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="628" />
-                <meta property="og:url" content={`https://www.billpacello.com/articles/${reqIndex}`} />
+                <meta property="og:url" content={`https://www.billpacello.com/articles/${articleIndex}`} />
                 <meta property="og:type" content="website" />
             </Head>
             <JumbotronDefault title={"Articles"} />
