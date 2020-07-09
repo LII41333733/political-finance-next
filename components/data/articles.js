@@ -406,7 +406,7 @@ the general welfare.</em></p>
                 the area where it was invented. After the product becomes adopted and used in the world markets, production
                 gradually moves away from the point of origin. In some situations, the product becomes an item that is imported
 by its original country of invention.<sup>i</sup></p>
-                <p><img src={"https://www.billpacello.com/images/articles/ag1.png"} /></p>
+                <p className={"text-center"}><img src={"https://www.billpacello.com/images/articles/ag1.png"} /></p>
                 <p>Some of you may be familiar with the graph of the product lifecycle. The first image shows how a product goes
                 through the stages from the perspective of manufacturing. The second shows the stages of the product by way
                 of consumption. We cannot marginalize the
@@ -439,7 +439,7 @@ by its original country of invention.<sup>i</sup></p>
                 Civil Service reform aimed at radical Republicans who rode the four horsemen of civilization—a lawyer, a
                 politician, a policeman, and a tax collectorii— roughshod over a nation of “humble members of society” in what’s
 sometimes referred to as the Second American System.</p>
-                <p><img src={"https://www.billpacello.com/images/articles/ag2.png"} /></p>
+                <p className={"text-center"}><img src={"https://www.billpacello.com/images/articles/ag2.png"} /></p>
                 <p>
                     Let’s switch gears using the second graphic
                     as a representation of the product lifecycle
@@ -479,11 +479,11 @@ sometimes referred to as the Second American System.</p>
                     apply the same model to pharmaceuticals. Does the litigation kick in after saturation? Here is a partial list of
                     lawsuits against certain medications according to Enjuris.com and Wikipedia.
                 </p>
-                <p><img src={"https://www.billpacello.com/images/articles/ag3.png"} /></p>
+                <p className={"text-center"}><img src={"https://www.billpacello.com/images/articles/ag3.png"} /></p>
                 <p>
                     There are plenty of improvements to be made in this country and plenty of work to be done. Some of us can
                     recognize it right outside our window. Where is the money and the will to get it done? If you read my article
-                    entitled, <a href={"https://www.billpacello.com/articles/6"}>“The Evolving Vise of the Command Economy,”</a> you can get an idea that both organizations, that of capital
+                    entitled, <a target={"_blank"} href={"https://www.billpacello.com/articles/6"}>“The Evolving Vise of the Command Economy,”</a> you can get an idea that both organizations, that of capital
                     and that of labor have raised price levels to the detriment of the masses. Some of the pain has been disguised
                     by cheap products from China but if tariffs and other wars continue to restrict trade then it might get more
                     painful unless American corporations reinvest in their country of origin.
@@ -498,7 +498,7 @@ sometimes referred to as the Second American System.</p>
 
                 <p><sup>ii</sup> “Escape from the Garden.“ Hell on Wheels.AMC. 2014.</p>
 
-                <p><sup>iii</sup> Rauchway, Eric, When and(to an extent) why did the parties switch places, May 20, 2010. <a href={"https://www.chronicle.com/blognetwork/edgeofthewest/2010/05/20/when-and-to-an-extent-why-did-the-parties-switch-places/"}>https://www.chronicle.com/blognetwork/edgeofthewest/2010/05/20/when-and-to-an-extent-why-did-the-parties-switch-places/</a>.
+                <p><sup>iii</sup> Rauchway, Eric, When and(to an extent) why did the parties switch places, May 20, 2010. <a target={"_blank"} href={"https://www.chronicle.com/blognetwork/edgeofthewest/2010/05/20/when-and-to-an-extent-why-did-the-parties-switch-places/"}>https://www.chronicle.com/blognetwork/edgeofthewest/2010/05/20/when-and-to-an-extent-why-did-the-parties-switch-places/</a>.
 </p>
                 <p><sup>iv</sup> Ibid.</p>
             </>

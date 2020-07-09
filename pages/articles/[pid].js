@@ -81,12 +81,13 @@ export default function Articles() {
                     <p className={"d-inline"}>{date}</p>
                 </div>
                 <div>
-                    <div className="float-left">
-                        <img
-                            className={"articleImg"}
-                            src={src} />
-                        {imageCaption}
-                    </div>
+                    {src &&
+                        <div className="float-left">
+                            <img
+                                className={"articleImg"}
+                                src={src} />
+                            {imageCaption}
+                        </div>}
                     {body}
                     {footer && <div className={"footerDash mt-5 mb-1"}></div>}
                     {footer}
