@@ -489,9 +489,6 @@ sometimes referred to as the Second American System.</p>
             </>
         ),
         id: 6,
-        imageCaption: (
-            <em className="textSize-4"><p><sup>i</sup> Figure 1 Wales, James Albert. The Proper Way. Puck—&quot;Come down both of you off your high horses and meet on equal ground.&quot; 1886.</p></em>
-        ),
         footer: (
             <>
                 <p><sup>i</sup> Madrick, Jeff.“How the Invisible Hand Was Corrupted by Laissez- Faire Economics.” <em>Evonomics</em>, 3 May 2018</p>
