@@ -823,8 +823,9 @@ a:hover {
 }
 
 .articlesContainer img {
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 15px 15px 0;
+    border-radius: 5px;
 }
 
 .articlesContainer p {
