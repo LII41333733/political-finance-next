@@ -102,7 +102,7 @@ export default function Articles() {
         <>
             {articleIndex !== null &&
                 <>
-                    <Head>
+                    <Head prefetch={false}>
                         <title>{articles[articleIndex].title}</title>
                         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                         <meta property="og:title" content={articles[articleIndex].title} />
