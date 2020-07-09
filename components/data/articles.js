@@ -483,7 +483,7 @@ sometimes referred to as the Second American System.</p>
                 <p>
                     There are plenty of improvements to be made in this country and plenty of work to be done. Some of us can
                     recognize it right outside our window. Where is the money and the will to get it done? If you read my article
-                    entitled, <a target={"_blank"} href={"https://www.billpacello.com/articles/6"}>“The Evolving Vise of the Command Economy,”</a> you can get an idea that both organizations, that of capital
+                    entitled, <a target={"_blank"} href={"https://www.billpacello.com/articles/4"}>“The Evolving Vise of the Command Economy,”</a> you can get an idea that both organizations, that of capital
                     and that of labor have raised price levels to the detriment of the masses. Some of the pain has been disguised
                     by cheap products from China but if tariffs and other wars continue to restrict trade then it might get more
                     painful unless American corporations reinvest in their country of origin.
