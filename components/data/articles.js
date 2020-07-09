@@ -395,7 +395,6 @@ the general welfare.</em></p>
         title: "Agitation and the Product Lifecycle",
         thumbSrc: `https://www.billpacello.com/images/articles/agitation.png`,
         metaSrc: `https://www.billpacello.com/images/articles/agitation.png`,
-        src: `https://www.billpacello.com/images/articles/agitation.png`,
         date: `June 30, 2020`,
         body: (
             <>
