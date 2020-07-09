@@ -49,7 +49,9 @@ export default function Articles() {
         return articles.map((a, i) => {
             const { thumbSrc, title, date } = a;
             return (
-                <Link href={`/articles/${i + 1}`}>
+                <Link
+                    key={title}
+                    href={`/articles/${i + 1}`}>
                     <div
                         key={i}
                         className="articleCard hoverZoom cursor m-2"
