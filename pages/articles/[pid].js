@@ -9,15 +9,10 @@ import Link from "next/link";
 import 'isomorphic-unfetch';
 import { useRouter } from 'next/router'
 
-Articles.getInitialProps = async ({ req }) => {
-    if (req.headers.referer) {
-        const reqString = req.headers.referer.split("/");
-        const reqIndex = reqString[reqString.length - 1];
-        return { reqIndex }
-    } else {
-        return { reqIndex: 6 }
-    }
-}
+// Articles.getInitialProps = ({ req }) => {
+//     console.log(req.url)
+//     return { reqIndex: 6 };
+// };
 
 //const client = require('contentful').createClient({
 //     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
