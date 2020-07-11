@@ -23,7 +23,7 @@ Articles.getInitialProps = function (reqOrContext) {
 
 //525x150
 export default function Articles({ pid }) {
-
+    const current = pid - 1;
     // useEffect(() => {
     //     const url = window.location.href.split("?")[0];
     //     const url2 = url.split("/")[url.split("/").length - 1] - 1;
@@ -96,14 +96,14 @@ export default function Articles({ pid }) {
     }
     return <>
         <Head>
-            <title>{articles[pid - 1].title}</title>
+            <title>{articles[current].title}</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <meta property="og:title" content={articles[pid - 1].title} />
-            <meta property="og:description" content={articles[pid - 1].short} />
-            <meta property="og:image" content={articles[pid - 1].metaSrc} />
+            <meta property="og:title" content={articles[current].title} />
+            <meta property="og:description" content={articles[current].short} />
+            <meta property="og:image" content={articles[current].metaSrc} />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="628" />
-            <meta property="og:url" content={`https://www.billpacello.com/articles/${pid - 1}`} />
+            <meta property="og:url" content={`https://www.billpacello.com/articles/${current}`} />
             <meta property="og:type" content="website" />
         </Head>
         <JumbotronDefault title={"Articles"} />
@@ -124,7 +124,7 @@ export default function Articles({ pid }) {
             <Row>
                 <DisplayArticle
                     articles={articles}
-                    articleIndex={pid - 1} />
+                    articleIndex={current} />
             </Row>
         </Container>
     </>
