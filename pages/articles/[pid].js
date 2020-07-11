@@ -6,8 +6,7 @@ import articles from '../../components/data/articles'
 import { scrollToTop, scrollToArticle } from "../../components/utils/functions/scrollToTop"
 import Head from 'next/head'
 import Link from "next/link";
-import 'isomorphic-unfetch';
-import { useRouter } from 'next/router'
+import Router from "next/router";
 
 Articles.getInitialProps = function (reqOrContext) {
     const { pid } = reqOrContext.query;
@@ -24,6 +23,7 @@ Articles.getInitialProps = function (reqOrContext) {
 
 //525x150
 export default function Articles({ pid }) {
+    Router.reload();
     const current = pid - 1;
     console.log(current)
     // useEffect(() => {
