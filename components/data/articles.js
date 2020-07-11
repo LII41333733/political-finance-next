@@ -388,7 +388,7 @@ the general welfare.</em></p>
         id: 5,
         imageCaption: (
             <em className="textSize-4"><p><sup>i</sup> Figure 1 Wales, James Albert. The Proper Way. Puck—&quot;Come down both of you off your high horses and meet on equal ground.&quot; 1886.</p></em>
-        )
+        ),
     },
     {
         short: "From the perspective of someone who has experienced 37 years in the 20th century and 20 years in the 21st, the challenges are mounting in this century.",
