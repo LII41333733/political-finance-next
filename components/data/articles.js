@@ -296,7 +296,7 @@ the general welfare.</em></p>
         id: 4
     },
     {
-        short: "Two months ago, I wrote an article entitled, The Coronavirus: Your Money or Your Life, discussing where officials and capitalists were weighing and questioning the severity of COVID- 19 against the economic impact...",
+        short: "Two months ago, I wrote an article entitled, The Coronavirus...",
         title: "The Revelations of COVID-19",
         thumbSrc: `https://www.billpacello.com/images/articles/coronavirus-thumb2.png`,
         metaSrc: `https://www.billpacello.com/images/articles/coronavirus-meta.png`,
