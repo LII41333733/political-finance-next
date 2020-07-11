@@ -9,10 +9,13 @@ import Link from "next/link";
 import 'isomorphic-unfetch';
 import { useRouter } from 'next/router'
 
-// Articles.getInitialProps = ({ req }) => {
-//     console.log(req.url)
-//     return { reqIndex: 6 };
-// };
+Articles.getInitialProps = ({ req }) => {
+    const artIndex = parseInt(req.url.split("?")[0].split("/")[2]);
+    console.log(`-----------------------`)
+    console.log(artIndex)
+    console.log(`-----------------------`)
+    return { reqIndex: artIndex };
+};
 
 //const client = require('contentful').createClient({
 //     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -21,13 +24,15 @@ import { useRouter } from 'next/router'
 
 //525x150
 export default function Articles({ reqIndex = 6 }) {
+    const $reqIndex = reqIndex - 1;
     // async function fetchEntries() {
     //     const entries = await client.getEntries()
     //     if (entries.items) return entries.items
     //     console.log(`Error getting Entries for ${contentType.name}.`)
     // }
 
-    const [articleIndex, setArticleIndex] = useState(parseInt(reqIndex - 1));
+    const [articleIndex, setArticleIndex] = useState($reqIndex);
+    console.log(reqIndex)
     // const [posts, setPosts] = useState([])
 
     // if (posts.length > 0) {
@@ -38,8 +43,7 @@ export default function Articles({ reqIndex = 6 }) {
     useEffect(() => {
         scrollToArticle();
         setArticleIndex(window.location.href.split("/").reverse()[0] - 1);
-
-    }, [articleIndex]);
+    }, [$reqIndex]);
 
 
 
@@ -97,17 +101,18 @@ export default function Articles({ reqIndex = 6 }) {
         )
     }
 
+    console.log(articles)
     return (
         <>
             <Head>
-                <title>{articles[articleIndex].title}</title>
+                <title>{articles[$reqIndex].title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta property="og:title" content={articles[articleIndex].title} />
-                <meta property="og:description" content={articles[articleIndex].short} />
-                <meta property="og:image" content={articles[articleIndex].metaSrc} />
+                <meta property="og:title" content={articles[$reqIndex].title} />
+                <meta property="og:description" content={articles[$reqIndex].short} />
+                <meta property="og:image" content={articles[$reqIndex].metaSrc} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="628" />
-                <meta property="og:url" content={`https://www.billpacello.com/articles/${articleIndex}`} />
+                <meta property="og:url" content={`https://www.billpacello.com/articles/${$reqIndex}`} />
                 <meta property="og:type" content="website" />
             </Head>
             <JumbotronDefault title={"Articles"} />
@@ -128,7 +133,7 @@ export default function Articles({ reqIndex = 6 }) {
                 <Row>
                     <DisplayArticle
                         articles={articles}
-                        articleIndex={articleIndex} />
+                        articleIndex={$reqIndex} />
                 </Row>
             </Container>
         </>
