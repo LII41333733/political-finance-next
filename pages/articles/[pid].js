@@ -6,14 +6,10 @@ import articles from '../../components/data/articles'
 import { scrollToTop, scrollToArticle } from "../../components/utils/functions/scrollToTop"
 import Head from 'next/head'
 import Link from "next/link";
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
+import { withRouter } from 'next/router'
 
-Articles.getInitialProps = function (reqOrContext) {
-    const { pid } = reqOrContext.query;
-    console.log(pid)
-    console.log(pid)
-    return { pid };
-}
+
 
 
 //const client = require('contentful').createClient({
@@ -22,29 +18,7 @@ Articles.getInitialProps = function (reqOrContext) {
 // })
 
 //525x150
-export default function Articles({ pid }) {
-    Router.reload();
-    const current = pid - 1;
-    console.log(current)
-    // useEffect(() => {
-    //     const url = window.location.href.split("?")[0];
-    //     const url2 = url.split("/")[url.split("/").length - 1] - 1;
-    //     setArticleIndex(url2);
-    //     scrollToArticle();
-    // })
-    // async function fetchEntries() {
-    //     const entries = await client.getEntries()
-    //     if (entries.items) return entries.items
-    //     console.log(`Error getting Entries for ${contentType.name}.`)
-    // }
-
-    // const [posts, setPosts] = useState([])
-
-    // if (posts.length > 0) {
-    //     console.log(posts)
-    //     debugger;
-    // }
-
+export function Articles({ router }) {
     const RenderArticles = ({ articles }) => {
         return articles.map((a, i) => {
             const { thumbSrc, title, date } = a;
@@ -96,38 +70,71 @@ export default function Articles({ pid }) {
             </div>
         )
     }
-    return <>
-        <Head>
-            <title>{articles[current].title}</title>
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <meta property="og:title" content={articles[current].title} />
-            <meta property="og:description" content={articles[current].short} />
-            <meta property="og:image" content={articles[current].metaSrc} />
-            <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="628" />
-            <meta property="og:url" content={`http://www.billpacello.com/articles/${pid}`} />
-            <meta property="og:type" content="website" />
-        </Head>
-        <JumbotronDefault title={"Articles"} />
-        <Container
-            className={`container-body`}
-            style={{ paddingBottom: "50px" }}>
-            <Row style={{ justifyContent: "center" }}>
-                <RenderArticles
-                    articles={articles} />
-            </Row>
-            <hr className="hr0" />
-            <hr className="hr1" />
-            <div
-                className="upBtnCircle cursor"
-                onClick={scrollToTop}>
-                <span className="upArrow">↑</span>
-            </div>
-            <Row>
-                <DisplayArticle
-                    articles={articles}
-                    articleIndex={current} />
-            </Row>
-        </Container>
-    </>
+
+    // console.log(`-------------`)
+    // console.log(router)
+    // console.log(router.pathname)
+    // console.log(router.query)
+    // console.log(`-------------`)
+
+    useEffect(() => {
+        scrollToArticle();
+    })
+    // async function fetchEntries() {
+    //     const entries = await client.getEntries()
+    //     if (entries.items) return entries.items
+    //     console.log(`Error getting Entries for ${contentType.name}.`)
+    // }
+
+    // const [posts, setPosts] = useState([])
+
+    // if (posts.length > 0) {
+    //     console.log(posts)
+    //     debugger;
+    // }
+
+    console.log("---------")
+    console.log(router)
+    console.log(router.query)
+    console.log(Object.keys(router.query).length)
+    console.log("---------")
+
+    return router.query.amp === undefined && !router.query.pid
+        ? <div></div>
+        : <>
+            <Head>
+                <title>{articles[router.query.pid - 1].title}</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta property="og:title" content={articles[router.query.pid - 1].title} />
+                <meta property="og:description" content={articles[router.query.pid - 1].short} />
+                <meta property="og:image" content={articles[router.query.pid - 1].metaSrc} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="628" />
+                <meta property="og:url" content={`http://www.billpacello.com/articles/${router.query.pid}`} />
+                <meta property="og:type" content="website" />
+            </Head>
+            <JumbotronDefault title={"Articles"} />
+            <Container
+                className={`container-body`}
+                style={{ paddingBottom: "50px" }}>
+                <Row style={{ justifyContent: "center" }}>
+                    <RenderArticles
+                        articles={articles} />
+                </Row>
+                <hr className="hr0" />
+                <hr className="hr1" />
+                <div
+                    className="upBtnCircle cursor"
+                    onClick={scrollToTop}>
+                    <span className="upArrow">↑</span>
+                </div>
+                <Row>
+                    <DisplayArticle
+                        articles={articles}
+                        articleIndex={router.query.pid - 1} />
+                </Row>
+            </Container>
+        </>
 }
+
+export default withRouter(Articles);
