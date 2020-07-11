@@ -21,11 +21,12 @@ import { useRouter } from 'next/router'
 //525x150
 export default function Articles() {
     const [articleIndex, setArticleIndex] = useState(-1);
-    //const artIndex = parseInt(;
+
     useEffect(() => {
         const url = window.location.href.split("?")[0];
         const url2 = url.split("/")[url.split("/").length - 1] - 1;
         setArticleIndex(url2);
+        scrollToArticle();
     })
     // async function fetchEntries() {
     //     const entries = await client.getEntries()
@@ -39,10 +40,6 @@ export default function Articles() {
     //     console.log(posts)
     //     debugger;
     // }
-
-    useEffect(() => {
-        scrollToArticle();
-    });
 
     const RenderArticles = ({ articles }) => {
         return articles.map((a, i) => {
