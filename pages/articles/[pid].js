@@ -9,9 +9,12 @@ import Link from "next/link";
 import 'isomorphic-unfetch';
 import { useRouter } from 'next/router'
 
-// Articles.getInitialProps = ({ req }) => {
-//     return { url: req.url };
-// };
+Articles.getInitialProps = function (reqOrContext) {
+    const { pid } = reqOrContext.query;
+    console.log(pid)
+    return { pid };
+}
+
 
 //const client = require('contentful').createClient({
 //     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -19,15 +22,14 @@ import { useRouter } from 'next/router'
 // })
 
 //525x150
-export default function Articles() {
-    const [articleIndex, setArticleIndex] = useState(-1);
+export default function Articles({ pid }) {
 
-    useEffect(() => {
-        const url = window.location.href.split("?")[0];
-        const url2 = url.split("/")[url.split("/").length - 1] - 1;
-        setArticleIndex(url2);
-        scrollToArticle();
-    })
+    // useEffect(() => {
+    //     const url = window.location.href.split("?")[0];
+    //     const url2 = url.split("/")[url.split("/").length - 1] - 1;
+    //     setArticleIndex(url2);
+    //     scrollToArticle();
+    // })
     // async function fetchEntries() {
     //     const entries = await client.getEntries()
     //     if (entries.items) return entries.items
@@ -92,42 +94,38 @@ export default function Articles() {
             </div>
         )
     }
-    return articleIndex > -1
-        ? (
-            <>
-                <Head>
-                    <title>{articles[articleIndex].title}</title>
-                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                    <meta property="og:title" content={articles[articleIndex].title} />
-                    <meta property="og:description" content={articles[articleIndex].short} />
-                    <meta property="og:image" content={articles[articleIndex].metaSrc} />
-                    <meta property="og:image:width" content="1200" />
-                    <meta property="og:image:height" content="628" />
-                    <meta property="og:url" content={`https://www.billpacello.com/articles/${articleIndex}`} />
-                    <meta property="og:type" content="website" />
-                </Head>
-                <JumbotronDefault title={"Articles"} />
-                <Container
-                    className={`container-body`}
-                    style={{ paddingBottom: "50px" }}>
-                    <Row style={{ justifyContent: "center" }}>
-                        <RenderArticles
-                            articles={articles} />
-                    </Row>
-                    <hr className="hr0" />
-                    <hr className="hr1" />
-                    <div
-                        className="upBtnCircle cursor"
-                        onClick={scrollToTop}>
-                        <span className="upArrow">↑</span>
-                    </div>
-                    <Row>
-                        <DisplayArticle
-                            articles={articles}
-                            articleIndex={articleIndex} />
-                    </Row>
-                </Container>
-            </>
-        )
-        : null
+    return <>
+        <Head>
+            <title>{articles[parseInt(pid) - 1].title}</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta property="og:title" content={articles[parseInt(pid) - 1].title} />
+            <meta property="og:description" content={articles[parseInt(pid) - 1].short} />
+            <meta property="og:image" content={articles[parseInt(pid) - 1].metaSrc} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="628" />
+            <meta property="og:url" content={`https://www.billpacello.com/articles/${parseInt(pid) - 1}`} />
+            <meta property="og:type" content="website" />
+        </Head>
+        <JumbotronDefault title={"Articles"} />
+        <Container
+            className={`container-body`}
+            style={{ paddingBottom: "50px" }}>
+            <Row style={{ justifyContent: "center" }}>
+                <RenderArticles
+                    articles={articles} />
+            </Row>
+            <hr className="hr0" />
+            <hr className="hr1" />
+            <div
+                className="upBtnCircle cursor"
+                onClick={scrollToTop}>
+                <span className="upArrow">↑</span>
+            </div>
+            <Row>
+                <DisplayArticle
+                    articles={articles}
+                    articleIndex={parseInt(pid) - 1} />
+            </Row>
+        </Container>
+    </>
 }
