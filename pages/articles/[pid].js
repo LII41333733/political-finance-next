@@ -103,7 +103,7 @@ export default function Articles({ pid }) {
             <meta property="og:image" content={articles[current].metaSrc} />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="628" />
-            <meta property="og:url" content={`https://www.billpacello.com/articles/${current}`} />
+            <meta property="og:url" content={`https://www.billpacello.com/articles/${pid}`} />
             <meta property="og:type" content="website" />
         </Head>
         <JumbotronDefault title={"Articles"} />
