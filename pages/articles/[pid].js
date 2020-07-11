@@ -96,14 +96,14 @@ export default function Articles({ pid }) {
     }
     return <>
         <Head>
-            <title>{articles[parseInt(pid) - 1].title}</title>
+            <title>{articles[pid - 1].title}</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <meta property="og:title" content={articles[parseInt(pid) - 1].title} />
-            <meta property="og:description" content={articles[parseInt(pid) - 1].short} />
-            <meta property="og:image" content={articles[parseInt(pid) - 1].metaSrc} />
+            <meta property="og:title" content={articles[pid - 1].title} />
+            <meta property="og:description" content={articles[pid - 1].short} />
+            <meta property="og:image" content={articles[pid - 1].metaSrc} />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="628" />
-            <meta property="og:url" content={`https://www.billpacello.com/articles/${parseInt(pid) - 1}`} />
+            <meta property="og:url" content={`https://www.billpacello.com/articles/${pid - 1}`} />
             <meta property="og:type" content="website" />
         </Head>
         <JumbotronDefault title={"Articles"} />
@@ -124,7 +124,7 @@ export default function Articles({ pid }) {
             <Row>
                 <DisplayArticle
                     articles={articles}
-                    articleIndex={parseInt(pid) - 1} />
+                    articleIndex={pid - 1} />
             </Row>
         </Container>
     </>
