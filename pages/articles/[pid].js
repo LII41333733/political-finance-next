@@ -12,6 +12,7 @@ import { useRouter } from 'next/router'
 Articles.getInitialProps = function (reqOrContext) {
     const { pid } = reqOrContext.query;
     console.log(pid)
+    console.log(pid)
     return { pid };
 }
 
@@ -24,6 +25,7 @@ Articles.getInitialProps = function (reqOrContext) {
 //525x150
 export default function Articles({ pid }) {
     const current = pid - 1;
+    console.log(current)
     // useEffect(() => {
     //     const url = window.location.href.split("?")[0];
     //     const url2 = url.split("/")[url.split("/").length - 1] - 1;
@@ -103,7 +105,7 @@ export default function Articles({ pid }) {
             <meta property="og:image" content={articles[current].metaSrc} />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="628" />
-            <meta property="og:url" content={`https://www.billpacello.com/articles/${pid}`} />
+            <meta property="og:url" content={`www.billpacello.com/articles/${pid}`} />
             <meta property="og:type" content="website" />
         </Head>
         <JumbotronDefault title={"Articles"} />
