@@ -9,10 +9,10 @@ import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import { withRouter } from 'next/router';
 
-const client = require('contentful').createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-})
+// const client = require('contentful').createClient({
+//     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+// })
 
 //525x150
 export function Articles({ router }) {
@@ -25,10 +25,10 @@ export function Articles({ router }) {
 
     const [posts, setPosts] = useState([])
 
-    if (posts.length > 0) {
-        console.log(posts)
-        debugger;
-    }
+    // if (posts.length > 0) {
+    //     console.log(posts)
+    //     debugger;
+    // }
 
     useEffect(() => {
         scrollToArticle();
