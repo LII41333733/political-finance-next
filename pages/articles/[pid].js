@@ -17,11 +17,11 @@ import { withRouter } from 'next/router';
 //525x150
 export function Articles({ router }) {
 
-    async function fetchEntries() {
-        const entries = await client.getEntries()
-        if (entries.items) return entries.items
-        console.log(`Error getting Entries for ${contentType.name}.`)
-    }
+    // async function fetchEntries() {
+    //     const entries = await client.getEntries()
+    //     if (entries.items) return entries.items
+    //     console.log(`Error getting Entries for ${contentType.name}.`)
+    // }
 
     const [posts, setPosts] = useState([])
 
