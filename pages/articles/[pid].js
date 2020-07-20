@@ -7,18 +7,33 @@ import { scrollToTop, scrollToArticle } from "../../components/utils/functions/s
 import Head from 'next/head'
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
-import { withRouter } from 'next/router'
+import { withRouter } from 'next/router';
 
-
-
-
-//const client = require('contentful').createClient({
-//     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-//     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-// })
+const client = require('contentful').createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+})
 
 //525x150
 export function Articles({ router }) {
+
+    async function fetchEntries() {
+        const entries = await client.getEntries()
+        if (entries.items) return entries.items
+        console.log(`Error getting Entries for ${contentType.name}.`)
+    }
+
+    const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        scrollToArticle();
+        async function getPosts() {
+            const allPosts = await fetchEntries()
+            setPosts([...allPosts])
+        }
+        getPosts()
+    }, [])
+
     const RenderArticles = ({ articles }) => {
         return articles.map((a, i) => {
             const { thumbSrc, title, date } = a;
@@ -77,27 +92,21 @@ export function Articles({ router }) {
     // console.log(router.query)
     // console.log(`-------------`)
 
-    useEffect(() => {
-        scrollToArticle();
-    })
-    // async function fetchEntries() {
-    //     const entries = await client.getEntries()
-    //     if (entries.items) return entries.items
-    //     console.log(`Error getting Entries for ${contentType.name}.`)
-    // }
 
-    // const [posts, setPosts] = useState([])
 
-    // if (posts.length > 0) {
-    //     console.log(posts)
-    //     debugger;
-    // }
+
+    if (posts.length > 0) {
+        console.log(posts)
+        debugger;
+    }
 
     console.log("---------")
     console.log(router)
     console.log(router.query)
     console.log(Object.keys(router.query).length)
     console.log("---------")
+
+
 
     return router.query.amp === undefined && !router.query.pid
         ? <div></div>
