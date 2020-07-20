@@ -23,7 +23,7 @@ export function Articles({ router }) {
     //     console.log(`Error getting Entries for ${contentType.name}.`)
     // }
 
-    const [posts, setPosts] = useState([])
+    //const [posts, setPosts] = useState([])
 
     // if (posts.length > 0) {
     //     console.log(posts)
@@ -102,11 +102,11 @@ export function Articles({ router }) {
 
 
 
-    console.log("---------")
-    console.log(router)
-    console.log(router.query)
-    console.log(Object.keys(router.query).length)
-    console.log("---------")
+    // console.log("---------")
+    // console.log(router)
+    // console.log(router.query)
+    // console.log(Object.keys(router.query).length)
+    // console.log("---------")
 
 
 
