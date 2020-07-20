@@ -30,14 +30,23 @@ export function Articles({ router }) {
     //     debugger;
     // }
 
-    useEffect(() => {
-        scrollToArticle();
-        // async function getPosts() {
-        //     const allPosts = await fetchEntries()
-        //     setPosts([...allPosts])
-        // }
-        // getPosts()
-    })
+    // console.log(`-------------`)
+    // console.log(router)
+    // console.log(router.pathname)
+    // console.log(router.query)
+    // console.log(`-------------`)
+
+
+
+
+
+
+    // console.log("---------")
+    // console.log(router)
+    // console.log(router.query)
+    // console.log(Object.keys(router.query).length)
+    // console.log("---------")
+
 
     const RenderArticles = ({ articles }) => {
         return articles.map((a, i) => {
@@ -90,24 +99,6 @@ export function Articles({ router }) {
             </div>
         )
     }
-
-    // console.log(`-------------`)
-    // console.log(router)
-    // console.log(router.pathname)
-    // console.log(router.query)
-    // console.log(`-------------`)
-
-
-
-
-
-
-    // console.log("---------")
-    // console.log(router)
-    // console.log(router.query)
-    // console.log(Object.keys(router.query).length)
-    // console.log("---------")
-
 
 
     return router.query.amp === undefined && !router.query.pid
