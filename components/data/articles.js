@@ -1,6 +1,6 @@
 import React from "react";
 
-short, title, thumbSrc, metaSrc, date, body, footer
+// short, title, thumbSrc, metaSrc, date, body, footer
 
 // Meta: 1200 x 630
 // Thumb: 525 x 150
