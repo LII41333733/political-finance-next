@@ -1,6 +1,10 @@
 import React from "react";
 
-//525x150
+short, title, thumbSrc, metaSrc, date, body, footer
+
+// Meta: 1200 x 630
+// Thumb: 525 x 150
+
 export default [
     {
         short: "For those of you who are not familiar with the story, an ox goad was a stick with a pointed piece of iron on its tip used to prod the oxen when plowing.",
@@ -95,8 +99,7 @@ export default [
         </>),
         footer: (
             <p><sup>i</sup> Madrick, Jeff.“How the Invisible Hand Was Corrupted by Laissez- Faire Economics.” <em>Evonomics</em>, 3 May 2018</p>
-        ),
-        id: 1
+        )
     }, {
         short: "For three years we have heard calls for the impeachment of President Trump for any number of alleged infractions; Russian collusion...",
         title: "Impeach King Trump",
@@ -121,8 +124,7 @@ export default [
         ),
         footer: (
             <p><sup>i</sup> Stewart, David O. “Impeached.” The Old Baldy Civil War Round Table. Camden County College, Blackwood, NJ. Oct. 12, 2017.</p>
-        ),
-        id: 2
+        )
     }, {
         short: "What we are experiencing is a seasonal existential event...relative to our time and the money...",
         title: "The Corona Virus: Your Money or Your Life",
@@ -177,8 +179,7 @@ export default [
                 the debt?
                 </p>
         </>),
-        footer: "",
-        id: 3
+        footer: ""
     }, {
         short: "As mentioned in the promotions for The Art of Political Finance Part I and II, the artists of the ...",
         title: `The \"Evolving Vise\" of the Command Economy`,
@@ -292,8 +293,7 @@ Royal Society.</p>
 the general welfare.</em></p>
             <p className="float-right"><em>Martin Van Buren 1837</em></p>
         </>
-        ),
-        id: 4
+        )
     },
     {
         short: "Two months ago, I wrote an article entitled, The Coronavirus...",
@@ -385,7 +385,6 @@ the general welfare.</em></p>
                 </p>
             </>
         ),
-        id: 5,
         imageCaption: (
             <em className="textSize-4"><p><sup>i</sup> Figure 1 Wales, James Albert. The Proper Way. Puck—&quot;Come down both of you off your high horses and meet on equal ground.&quot; 1886.</p></em>
         ),
@@ -490,7 +489,6 @@ sometimes referred to as the Second American System.</p>
                 </p>
             </>
         ),
-        id: 6,
         footer: (
             <>
                 <p><sup>i</sup> Hill, Charles (2007). <em>International Business Competing in the Global Marketplace 6th ed.</em> McGraw-Hill. pp. 168. ISBN 978-0-07-310255-9.</p>
@@ -505,3 +503,10 @@ sometimes referred to as the Second American System.</p>
     },
 
 ];
+
+
+
+
+
+
+

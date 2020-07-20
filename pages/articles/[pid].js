@@ -25,14 +25,19 @@ export function Articles({ router }) {
 
     const [posts, setPosts] = useState([])
 
+    if (posts.length > 0) {
+        console.log(posts)
+        debugger;
+    }
+
     useEffect(() => {
         scrollToArticle();
-        async function getPosts() {
-            const allPosts = await fetchEntries()
-            setPosts([...allPosts])
-        }
-        getPosts()
-    }, [])
+        // async function getPosts() {
+        //     const allPosts = await fetchEntries()
+        //     setPosts([...allPosts])
+        // }
+        // getPosts()
+    })
 
     const RenderArticles = ({ articles }) => {
         return articles.map((a, i) => {
@@ -95,10 +100,7 @@ export function Articles({ router }) {
 
 
 
-    if (posts.length > 0) {
-        console.log(posts)
-        debugger;
-    }
+
 
     console.log("---------")
     console.log(router)
