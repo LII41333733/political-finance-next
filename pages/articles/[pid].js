@@ -100,6 +100,14 @@ export function Articles({ router }) {
         )
     }
 
+    useEffect(() => {
+        scrollToArticle();
+        // async function getPosts() {
+        //     const allPosts = await fetchEntries()
+        //     setPosts([...allPosts])
+        // }
+        // getPosts()
+    })
 
     return router.query.amp === undefined && !router.query.pid
         ? <div></div>
