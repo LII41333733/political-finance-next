@@ -5,5 +5,5 @@ export const scrollToTop = () => {
 }
 
 export const scrollToArticle = () => {
-    window.scrollTo({ top: 700, behavior: "smooth" });
+    window.scrollTo({ top: 870, behavior: "smooth" });
 }
