@@ -9,9 +9,9 @@ export default [
     {
         short: "For those of you who are not familiar with the story, an ox goad was a stick with a pointed piece of iron on its tip used to prod the oxen when plowing.",
         title: "Battleships and Bromides",
-        thumbSrc: `https://www.billpacello.com/images/articles/battleships-thumb.png`,
-        metaSrc: `https://www.billpacello.com/images/articles/battleships-meta.png`,
-        src: `https://www.billpacello.com/images/articles/battleships.png`,
+        thumbSrc: `../images/articles/battleships-thumb.png`,
+        metaSrc: `../images/articles/battleships-meta.png`,
+        src: `../images/articles/battleships.png`,
         date: `February 5, 2019`,
         body: (<>
             <h4 className={`textColorPrimary toolsTitle schadow`}>HOW THE WORLD WAS FASHIONED <br /> BY PIN PRICKS</h4>
@@ -103,9 +103,9 @@ export default [
     }, {
         short: "For three years we have heard calls for the impeachment of President Trump for any number of alleged infractions; Russian collusion...",
         title: "Impeach King Trump",
-        thumbSrc: `https://www.billpacello.com/images/articles/trump-thumb.png`,
-        metaSrc: `https://www.billpacello.com/images/articles/trump-meta.png`,
-        src: `https://www.billpacello.com/images/articles/trump.png`,
+        thumbSrc: `../images/articles/trump-thumb.png`,
+        metaSrc: `../images/articles/trump-meta.png`,
+        src: `../images/articles/trump.png`,
         date: `March 12, 2019`,
         body: (<>
             <p>
@@ -128,9 +128,9 @@ export default [
     }, {
         short: "What we are experiencing is a seasonal existential event...relative to our time and the money...",
         title: "The Corona Virus: Your Money or Your Life",
-        thumbSrc: `https://www.billpacello.com/images/articles/coronavirus-thumb.jpg`,
-        metaSrc: `https://www.billpacello.com/images/articles/coronavirus-meta.png`,
-        src: `https://www.billpacello.com/images/articles/coronavirus.png`,
+        thumbSrc: `../images/articles/coronavirus-thumb.jpg`,
+        metaSrc: `../images/articles/coronavirus-meta.png`,
+        src: `../images/articles/coronavirus.png`,
         date: `March 26, 2020`,
         body: (<>
             <p>
@@ -183,9 +183,9 @@ export default [
     }, {
         short: "As mentioned in the promotions for The Art of Political Finance Part I and II, the artists of the ...",
         title: `The \"Evolving Vise\" of the Command Economy`,
-        thumbSrc: `https://www.billpacello.com/images/articles/vise-thumb.jpg`,
-        metaSrc: `https://www.billpacello.com/images/articles/vise-meta.png`,
-        src: `https://www.billpacello.com/images/articles/vise.png`,
+        thumbSrc: `../images/articles/vise-thumb.jpg`,
+        metaSrc: `../images/articles/vise-meta.png`,
+        src: `../images/articles/vise.png`,
         date: "March 30, 2020",
         body: (<>
             <p>
@@ -298,9 +298,9 @@ the general welfare.</em></p>
     {
         short: "Two months ago, I wrote an article entitled, The Coronavirus...",
         title: "The Revelations of COVID-19",
-        thumbSrc: `https://www.billpacello.com/images/articles/coronavirus-thumb2.png`,
-        metaSrc: `https://www.billpacello.com/images/articles/coronavirus-meta.png`,
-        src: `https://www.billpacello.com/images/articles/coronavirus2.png`,
+        thumbSrc: `../images/articles/coronavirus-thumb2.png`,
+        metaSrc: `../images/articles/coronavirus-meta.png`,
+        src: `../images/articles/coronavirus2.png`,
         date: `May 20, 2020`,
         body: (
             <>
@@ -392,8 +392,8 @@ the general welfare.</em></p>
     {
         short: "From the perspective of someone who has experienced 37 years in the 20th century and 20 years in the 21st, the challenges are mounting in this century.",
         title: "Agitation and the Product Lifecycle",
-        thumbSrc: `https://www.billpacello.com/images/articles/agitation.png`,
-        metaSrc: `https://www.billpacello.com/images/articles/agitation.png`,
+        thumbSrc: `../images/articles/agitation.png`,
+        metaSrc: `../images/articles/agitation.png`,
         date: `June 30, 2020`,
         body: (
             <>
@@ -405,7 +405,7 @@ the general welfare.</em></p>
                 the area where it was invented. After the product becomes adopted and used in the world markets, production
                 gradually moves away from the point of origin. In some situations, the product becomes an item that is imported
 by its original country of invention.<sup>i</sup></p>
-                <p className={"text-center"}><img src={"https://www.billpacello.com/images/articles/ag1.png"} /></p>
+                <p className={"text-center"}><img src={"../images/articles/ag1.png"} /></p>
                 <p>Some of you may be familiar with the graph of the product lifecycle. The first image shows how a product goes
                 through the stages from the perspective of manufacturing. The second shows the stages of the product by way
                 of consumption. We cannot marginalize the
@@ -438,7 +438,7 @@ by its original country of invention.<sup>i</sup></p>
                 Civil Service reform aimed at radical Republicans who rode the four horsemen of civilization—a lawyer, a
                 politician, a policeman, and a tax collector<sup>ii</sup> — roughshod over a nation of “humble members of society” in what’s
 sometimes referred to as the Second American System.</p>
-                <p className={"text-center"}><img src={"https://www.billpacello.com/images/articles/ag2.png"} /></p>
+                <p className={"text-center"}><img src={"../images/articles/ag2.png"} /></p>
                 <p>
                     Let’s switch gears using the second graphic
                     as a representation of the product lifecycle
@@ -478,7 +478,7 @@ sometimes referred to as the Second American System.</p>
                     apply the same model to pharmaceuticals. Does the litigation kick in after saturation? Here is a partial list of
                     lawsuits against certain medications according to Enjuris.com and Wikipedia.
                 </p>
-                <p className={"text-center"}><img src={"https://www.billpacello.com/images/articles/ag3.png"} /></p>
+                <p className={"text-center"}><img src={"../images/articles/ag3.png"} /></p>
                 <p>
                     There are plenty of improvements to be made in this country and plenty of work to be done. Some of us can
                     recognize it right outside our window. Where is the money and the will to get it done? If you read my article
@@ -500,7 +500,62 @@ sometimes referred to as the Second American System.</p>
                 <p><sup>iv</sup> Ibid.</p>
             </>
         ),
-    },
+    }, {
+        short: "We all have opinions about what our country should be and how the pie should be cut and distributed, but on what do we base those opinions? If we base them on the current narratives from most news",
+        title: "The American Pie",
+        thumbSrc: `../images/articles/pie.png`,
+        metaSrc: `../images/articles/pie.png`,
+        date: `August 4, 2020`,
+        body: (
+            <>
+                <p>We all have opinions about what our country should be and how the pie should be cut and distributed, but on
+                what do we base those opinions? If we base them on the current narratives from most news media, then our
+                biases are at risk of having little historic and economic foundation. If we base them on the history from public education, including that of higher education, of which I am a product, then I can assure you there are some
+major voids.</p>
+                <p className={"text-center"}><img height={400} src={"../images/articles/pie1.png"} /></p>
+                <p>The pie chart in Figure 1 represents a categorical list of topics in the curriculum of the history of the United States, both at the secondary level and the collegiate level. The numbers next to the category represent the per-
+                centage of time that may be spent on each topic in the course of a year or semester. I am not sure this suffices for even a History 101 course. This experience is supported by Dr. E Michael Jones (Temple University), Dr. James
+                Loewen (University of Vermont),
+                Dr. Noam Chomsky (University of
+                Pennsylvania), Dr. Howard Zinn
+                (Columbia University), and others
+                who have attested to the fact that the
+                history taught in public schools and
+                institutions infantilizes students.
+                One example of this is teaching
+                history from the Revolutionary War
+                right to the Civil War and leaving
+                out key events and issues of the
+                antebellum period. For a more
+                comprehensive understanding of
+                our history, it does not necessarily
+                require more details on the same
+                topics, like battles and their
+                strategy. In order to get a better idea
+                of our history the categories must be
+expanded. See Figure 2.</p>
+                <p className={"text-center"}><img height={400} src={"../images/articles/pie2.png"} /></p>
+                <p>
+                    Of course, the perennial argument is, “how do we teach children everything?” We know we can’t, but we can
+                    teach children a more thorough account of our history by including it in the curriculum from the first grade to
+                    the twelfth. As an example of advancing our knowledge of history thereafter at the collegiate level, let’s refer to
+                    the railroads. With no knowledge of the railroads, we lack knowledge of both agricultural and labor struggles,
+                    technology, price fixing, and a significant piece of the American Pie that affects us much more than the wars that
+                    are at the forefront of most texts. The same can be said for any of the topics after “Civil Rights,” moving clockwise
+
+                    on the pie. As a Business Administration major, with economics and history courses supplementing that course-
+                    work at two universities, all of these topics were omitted. We cannot continue to ignore this part of our history
+
+                    and wonder why we think or feel the way we do. I urge parents to educate their young adults to a more com-
+                    prehensive truth; one that will prepare them for a greater spectrum of possibilities based upon increased expo-
+                    sure to real events in the last 250 years. For a portion of this history I recommend my books entitled, <em>The Art of
+
+                    Political Finance – Volume I – Parts I and II, from the Colonial Era through the Gilded Age.</em>
+                </p>
+                <p>For information on these books go to <a href={"https://www.billpacello.com"}>https://www.billpacello.com</a></p>
+            </>
+        )
+    }
 
 ];
 
