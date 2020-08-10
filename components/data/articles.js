@@ -546,9 +546,7 @@ expanded. See Figure 2.</p>
                     on the pie. As a Business Administration major, with economics and history courses supplementing that course-
                     work at two universities, all of these topics were omitted. We cannot continue to ignore this part of our history
 
-                    and wonder why we think or feel the way we do. I urge parents to educate their young adults to a more com-
-                    prehensive truth; one that will prepare them for a greater spectrum of possibilities based upon increased expo-
-                    sure to real events in the last 250 years. For a portion of this history I recommend my books entitled, <em>The Art of
+                    and wonder why we think or feel the way we do. I urge parents to educate their young adults to a more comprehensive truth; one that will prepare them for a greater spectrum of possibilities based upon increased exposure to real events in the last 250 years. For a portion of this history I recommend my books entitled, <em>The Art of
 
                     Political Finance – Volume I – Parts I and II, from the Colonial Era through the Gilded Age.</em>
                 </p>
