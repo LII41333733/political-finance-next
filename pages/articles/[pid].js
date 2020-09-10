@@ -41,7 +41,8 @@ export function Articles({ router }) {
     console.log(`-------------`)
     console.log(router)
     console.log(router.pathname)
-    console.log()
+    console.log(router.query.pid)
+    console.log(articleIndex)
     console.log(`-------------`)
 
     // console.log("---------")
@@ -87,10 +88,9 @@ export function Articles({ router }) {
         }
         getPosts();
         //scrollToArticle();
-    }, [])
-    console.log(posts.length)
-    console.log(articleIndex)
-    return posts.length < 0
+    }, [loadCount])
+
+    return router.query.amp === undefined && !router.query.pid
         ? <div></div>
         : <>
             <Head>
