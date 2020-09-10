@@ -484,6 +484,10 @@ a:hover {
     margin: 0 !important;
 }
 
+.isItalic {
+    font-style: italic;
+}
+
 .textCenter {
     text-align: center !important;
 }
@@ -829,7 +833,6 @@ a:hover {
 }
 
 .articlesContainer p {
-    text-align: justify;
     line-height: 35px;
     clear: right;
 }
@@ -837,7 +840,7 @@ a:hover {
 .articleImg {
     width: 400px;
     height: auto;
-    text-align: left;
+    text-align: center;
     margin: 0 15px 15px 0;
 }
 

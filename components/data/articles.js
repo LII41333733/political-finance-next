@@ -500,7 +500,8 @@ sometimes referred to as the Second American System.</p>
                 <p><sup>iv</sup> Ibid.</p>
             </>
         ),
-    }, {
+    },
+    {
         short: "We all have opinions about what our country should be and how the pie should be cut and distributed, but on what do we base those opinions? If we base them on the current narratives from most news",
         title: "The American Pie",
         thumbSrc: `../images/articles/pie.png`,

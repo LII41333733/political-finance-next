@@ -53,21 +53,13 @@ export default function Articles({ isMobile }) {
         return (
             <div className={`${isMobile ? "p-3" : "slimContain"} articlesContainer`}>
                 <h2 className="textColorPrimary toolsTitle textCenter schadow">{title.toUpperCase()}</h2>
-                <div className={"text-center"}>
+                <div>
                     <p className={"d-inline mr-2"}>Bill Pacello</p>
                     <p className={"d-inline"}>{date}</p>
                 </div>
-                <div>
-                    <div className="float-left">
-                        <img
-                            className={"articleImg"}
-                            src={src} />
-                        {imageCaption}
-                    </div>
-                    {body}
-                    {footer && <div className={"footerDash mt-5 mb-1"}></div>}
-                    {footer}
-                </div>
+                {body}
+                {footer && <div className={"footerDash mt-5 mb-1"}></div>}
+                {footer}
             </div>
         )
     }
