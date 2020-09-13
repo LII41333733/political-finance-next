@@ -397,7 +397,7 @@ the general welfare.</em></p>
         date: `June 30, 2020`,
         body: (
             <>
-                <p>From the perspective of someone who has experienced 37 years in the 20<sup>st</sup>-century and 20 years in the 21<sup>st</sup>, the
+                <p>From the perspective of someone who has experienced 37 years in the 20<sup>th</sup>-century and 20 years in the 21<sup>st</sup>, the
                 challenges are mounting in this century. Many of them can be summed up with the application of the product
                 lifecycle. The <strong>Product Life Cycle Theory</strong> is an economic theory that was developed by Raymond Vernon in
                 response to the failure of the Heckscher-Ohlin model to explain the observed pattern of international trade. The

@@ -18,8 +18,8 @@ const client = require('contentful').createClient({
 })
 
 //525x150
-export function Articles({ router }) {
-    const articleIndex = router.query.pid - 1;
+export function Articles() {
+    const router = useRouter();
     const [posts, setPosts] = useState([{
         thumb: "",
         meta: "",
@@ -30,50 +30,54 @@ export function Articles({ router }) {
         body: []
     }]);
 
+    const [articleIndex, setIndex] = useState(null);
+
     async function fetchEntries() {
         const entries = await client.getEntries()
         if (entries.items) return entries.items
         console.log(`Error getting Entries for ${contentType.name}.`)
     }
 
-    const [loadCount, setLoadCount] = useState(0);
-
-    console.log(`-------------`)
-    console.log(router)
-    console.log(router.pathname)
-    console.log()
-    console.log(`-------------`)
-
-    // console.log("---------")
-    // console.log(router)
-    // console.log(router.query)
-    // console.log(Object.keys(router.query).length)
-    // console.log("---------")
-
     useEffect(() => {
         async function getPosts() {
             const allPosts = await fetchEntries();
-
+            console.log(allPosts)
             const mappedPosts = allPosts
                 .map(e => {
+                    console.log(e)
+                    const footerFields = e.fields.footer
+                        ? e.fields.footer.content
+                        : []
                     return {
                         thumb: e.fields.articleThumbnail.fields.file.url,
                         meta: e.fields.metaImage.fields.file.url,
                         title: e.fields.title,
                         short: e.fields.shortDescription,
                         date: moment(e.fields.date).format("LL"),
-                        footer: e.fields.footer,
-                        body: e.fields.body.content.map(e => {
+                        footer: footerFields.map((e, i) => {
+                            console.log(e.content[0].value)
+
+                            const isItalic = e.content[0].marks.length > 0 && e.content[0].marks[0].type === "italic";
+                            return (
+                                <p
+                                    key={e.content[0].value}
+                                    dangerouslySetInnerHTML={{ __html: e.content[0].value }}
+                                    className={`${isItalic && "isItalic"} text-left`} />
+                            );
+                        }),
+                        body: e.fields.body.content.map((e, i) => {
                             switch (e.nodeType) {
                                 case "embedded-asset-block":
-                                    return <p><img
-                                        className="articleImg"
-                                        src={e.data.target.fields.file.url} /></p>;
+                                    return <p key={e.data.target.fields.file.url}>
+                                        <img
+                                            className="articleImg"
+                                            src={e.data.target.fields.file.url} /></p>;
                                     break;
                                 case "paragraph":
                                     const isItalic = e.content[0].marks.length > 0 && e.content[0].marks[0].type === "italic";
                                     return (
                                         <p
+                                            key={e.content[0].value}
                                             dangerouslySetInnerHTML={{ __html: e.content[0].value }}
                                             className={`${isItalic && "isItalic"} text-left`} />
                                     );
@@ -86,13 +90,20 @@ export function Articles({ router }) {
             setPosts(mappedPosts);
         }
         getPosts();
-        //scrollToArticle();
     }, [])
-    console.log(posts.length)
-    console.log(articleIndex)
-    return posts.length < 0
-        ? <div></div>
-        : <>
+
+    useEffect(() => {
+        setIndex(parseInt(router.query.pid) - 1)
+        setPosts(posts)
+    }, [router]);
+
+    useEffect(() => {
+        scrollToArticle();
+    })
+
+
+    return (articleIndex !== null && posts.length > 1)
+        ? <>
             <Head>
                 <title>{posts[articleIndex].title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -126,6 +137,7 @@ export function Articles({ router }) {
                 </Row>
             </Container>
         </>
+        : < div></div>
 }
 
 export default withRouter(Articles);
@@ -167,7 +179,7 @@ export const DisplayArticle = ({ article }) => {
             </div>
             {body}
             {footer && <div className={"footerDash mt-5 mb-1"}></div>}
-            <p className={"textLeft"} dangerouslySetInnerHTML={{ __html: footer }} />
+            {footer}
         </div>
     )
 }
