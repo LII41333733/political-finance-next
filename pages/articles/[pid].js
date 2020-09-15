@@ -74,7 +74,7 @@ export function Articles() {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta property="og:title" content={posts[articleIndex].title} />
                 <meta property="og:description" content={posts[articleIndex].short} />
-                <meta property="og:image" content={posts[articleIndex].meta} />
+                <meta property="og:image" content={posts[articleIndex].meta.slice(2)} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="628" />
                 <meta property="og:url" content={`http://www.billpacello.com/articles/${router.query.pid}`} />
