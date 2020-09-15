@@ -77,7 +77,7 @@ export function Articles() {
                 <meta property="og:image" content={posts[articleIndex].meta} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="628" />
-                <meta property="og:url" content={`http://www.billpacello.com/articles/7`} />
+                <meta property="og:url" content={`http://www.billpacello.com/articles/${router.query.pid}`} />
                 {/* <meta property="og:url" content={`http://www.billpacello.com/articles/${router.query.pid}`} /> */}
                 <meta property="og:type" content="website" />
             </Head>
