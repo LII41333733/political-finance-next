@@ -8,11 +8,11 @@ import Head from 'next/head'
 export default function App({ Component, pageProps }) {
     return (
         <>
-            <Head>
+            {/* <Head>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-            </Head>
+            </Head> */}
             <Container className="text-center" fluid>
                 <Navigation />
                 <Component {...pageProps} />

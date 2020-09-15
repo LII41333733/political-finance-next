@@ -11,29 +11,65 @@ import { withRouter } from 'next/router';
 import moment from "moment";
 import { Options, ContentfulClient } from "../../components/utils/contentfulOptions";
 
+export async function getStaticPaths() {
+    const posts = await ContentfulClient.getEntries();
+
+    // const paths = posts.items
+    //     .map((post) => ({
+    //         params: { id: post.id },
+    //     }))
+
+    const posts_ = posts.items.filter(e => e.fields.metaImage !== undefined)
+    const paths = posts_.map((post) => ({
+        params: { pid: post.fields.id.toString() },
+    }));
+
+    return { paths, fallback: false }
+}
+
+export async function getStaticProps({ params }) {
+    const posts = await ContentfulClient.getEntries();
+    const posts_ = posts.items.filter(e => e.fields.metaImage !== undefined)
+    const int_ = Number(params.pid);
+    console.log(int_)
+    console.log()
+
+    // console.log(posts[parseInt(params.pid)])
+    // debugger;
+    // if (posts.items) return posts.items
+    // console.log(`Error getting posts for ${contentType.name}.`)
+    return {
+        props: posts_[int_ - 1].fields,
+    }
+}
+
 //525x150
-export function Articles() {
+export function Articles(props) {
+
+
+    console.log(props)
     const router = useRouter();
-    const [posts, setPosts] = useState([{
-        thumb: "",
-        meta: "",
-        title: "",
-        short: "",
-        date: "",
-        footer: "",
-        body: []
-    }]);
+    // const [posts, setPosts] = useState([{
+    //     thumb: "",
+    //     meta: "",
+    //     title: "",
+    //     short: "",
+    //     date: "",
+    //     footer: "",
+    //     body: []
+    // }]);
 
     const [articleIndex, setIndex] = useState(null);
 
-    async function fetchEntries() {
-        const entries = await ContentfulClient.getEntries();
-        if (entries.items) return entries.items
-        console.log(`Error getting Entries for ${contentType.name}.`)
-    }
+    // async function fetchEntries() {
+    //     const entries = await ContentfulClient.getEntries();
+    //     if (entries.items) return entries.items
+    //     console.log(`Error getting Entries for ${contentType.name}.`)
+    // }
 
     useEffect(() => {
         async function getPosts() {
+            debugger;
             const allPosts = await fetchEntries();
             console.log(allPosts)
             const mappedPosts = allPosts
