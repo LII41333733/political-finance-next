@@ -8,13 +8,37 @@ import EmailComponent from "../components/checkout/emailComponent"
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card';
 import Link from "next/link";
-
 import timelines from "../components/data/timelines"
-import lessonPlans from "../components/data/lessonPlans"
+import { ContentfulClient, getLessons } from "../components/utils/contentfulOptions";
 
 export default () => {
+    const [posts, setPosts] = useState([{
+        id: 0,
+        title: "",
+        price: 0,
+        media: "",
+        image: "",
+        description: ""
+    }]);
+    console.log(posts)
+
+
+    async function fetchEntries() {
+        const entries = await ContentfulClient.getEntries();
+        if (entries.items) return entries.items
+        console.log(`Error getting Entries for ${contentType.name}.`)
+    }
+
+    useEffect(() => {
+        async function getPosts() {
+            const allPosts = await fetchEntries();
+            console.log(allPosts)
+            setPosts(getLessons(allPosts));
+        }
+        getPosts();
+    }, [])
+
     const [action, setAction] = useState(null);
-    const [loaded, setLoaded] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
     const [error, setError] = useState(null);
     const [paypalContinue, setPayPalContinue] = useState(false);
@@ -23,6 +47,7 @@ export default () => {
     const [email, setEmail] = useState("");
     const [orderDetails, setOrderDetails] = useState(null);
     const paypalRef = useRef();
+
     const makeNewChildren = () => {
         window.paypal
             .Buttons({
@@ -43,7 +68,6 @@ export default () => {
                     const order = await actions.order.capture();
                     setOrderDetails(order)
                     setShowConfirmation(true);
-                    setLoaded(false);
                 },
                 onError: err => {
                     setError(err);
@@ -63,6 +87,7 @@ export default () => {
         var strTime = hours + ':' + minutes + ' ' + ampm;
         return strTime;
     }
+
     const purchaseConfirmation = (details) => {
         const date = new Date(orderDetails.create_time);
         const parsedDate = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + date.getFullYear();
@@ -89,6 +114,7 @@ export default () => {
                 </div>
             );
         }
+        debugger;
         return (
             <div className="nav-link-confirm">
                 <h2>{`Confirmed!`}</h2><br />
@@ -98,11 +124,12 @@ export default () => {
                 <h2>Your order details are listed below:</h2>
                 <h3>{`Confirmation ID: ${orderDetails.id}`}</h3>
                 <h3>{`Date & Time: ${parsedDate} ${parsedTime}`}</h3>
-                <h3>{`Amount: $${donatorValue.toFixed(2) || "3.50"}`}</h3><br />
+                <h3>{`Amount: $${details.price || "3.50"}`}</h3><br />
                 <h2>Click the "Download" button to obtain your contents.</h2>
             </div>
         );
     }
+
     const renderPaypalCard = () =>
         <Card
             border={"dark"}
@@ -122,6 +149,7 @@ export default () => {
             </Button>
             <div ref={paypalRef} />
         </Card>
+
     const donationComponent = () => {
         return (
             <Container className="container-body">
@@ -175,6 +203,7 @@ export default () => {
             </Container >
         )
     }
+
     const purchaseComponent = () =>
         <Container className="container-body">
             <Row>
@@ -193,24 +222,21 @@ export default () => {
                 </Col>
             </Row>
         </Container>
+
     const getData = () => {
         const key = window.location.href.split("/").reverse()[1];
-        const index = window.location.href.split("/").reverse()[0];
+        const index = parseInt(window.location.href.split("/").reverse()[0]);
 
         key === "lessons"
-            ? setAction(lessonPlans[index - 1])
+            ? setAction(posts[index - 1])
             : setAction(timelines[index - 1]);
     }
-
-    error !== null && alert(error);
-    loaded && makeNewChildren();
-
 
     useEffect(() => {
         if (!paypalContinue) {
             window.location.href.split("/").includes("donation")
                 ? setAction("donation")
-                : getData()
+                : posts.length > 1 && getData()
         }
 
         const script = document.createElement("script");
@@ -222,11 +248,12 @@ export default () => {
         // script.src = `https://www.paypal.com/sdk/js?client-id=AZILohc0HD2gaHUBuQyBd94qxd5D9z4tSjH0BvEAXWqgKxwLAfiT0-dHIAB1DoxWTAN-LIH0YiAFzQyg`;
 
         script.addEventListener("load", () => {
-            setLoaded(true);
-
+            makeNewChildren()
         });
         document.body.appendChild(script);
-    }, []);
+    });
+
+    console.log(action)
 
     return (
         <>

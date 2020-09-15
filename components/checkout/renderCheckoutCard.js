@@ -6,7 +6,8 @@ import Col from 'react-bootstrap/Col'
 import Link from "next/link";
 
 export default ({ data, showConfirmation }) => {
-    const { src, href, title, price } = data;
+    const { image, media, title, price } = data;
+    debugger;
     return (
         <>
             <Card
@@ -14,7 +15,7 @@ export default ({ data, showConfirmation }) => {
                 className={`toolCard p-0 d-inline-block m-3 textCenter`}>
                 <Card.Img
                     variant="top"
-                    src={src} />
+                    src={image} />
                 <Card.Body className="p-0 my-auto">
                     <Card.Header
                         className="align-items-center justify-content-center d-flex">
@@ -43,7 +44,7 @@ export default ({ data, showConfirmation }) => {
                                     variant={"dark"}
                                     size="lg"
                                     className={`checkoutBtnDownload w-100 ${!showConfirmation && "not-allowed"}`}
-                                    href={href}
+                                    href={media}
                                     download={title}
                                     disabled={!showConfirmation}>
                                     {"Download"}

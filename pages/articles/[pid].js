@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import JumbotronDefault from "../../components/jumbotrons/jumbotronDefault";
-//import articles from '../../components/data/articles'
 import { scrollToTop, scrollToArticle } from "../../components/utils/functions/scrollToTop"
 import Head from 'next/head'
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import { withRouter } from 'next/router';
 import moment from "moment";
-
-const client = require('contentful').createClient({
-    space: "sa1dyqzyb7zu",
-    //space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-    //accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-    accessToken: "Fr2U2Ge3ToiX7PTNOjilHDg5CUpVR4JijHkYQ3VAM04"
-})
+import { Options, ContentfulClient } from "../../components/utils/contentfulOptions";
 
 //525x150
 export function Articles() {
@@ -33,7 +27,7 @@ export function Articles() {
     const [articleIndex, setIndex] = useState(null);
 
     async function fetchEntries() {
-        const entries = await client.getEntries()
+        const entries = await ContentfulClient.getEntries();
         if (entries.items) return entries.items
         console.log(`Error getting Entries for ${contentType.name}.`)
     }
@@ -43,47 +37,18 @@ export function Articles() {
             const allPosts = await fetchEntries();
             console.log(allPosts)
             const mappedPosts = allPosts
+                .filter(e => e.fields.price === undefined)
                 .map(e => {
                     console.log(e)
-                    const footerFields = e.fields.footer
-                        ? e.fields.footer.content
-                        : []
+                    // debugger;
                     return {
                         thumb: e.fields.articleThumbnail.fields.file.url,
                         meta: e.fields.metaImage.fields.file.url,
                         title: e.fields.title,
                         short: e.fields.shortDescription,
                         date: moment(e.fields.date).format("LL"),
-                        footer: footerFields.map((e, i) => {
-                            console.log(e.content[0].value)
-
-                            const isItalic = e.content[0].marks.length > 0 && e.content[0].marks[0].type === "italic";
-                            return (
-                                <p
-                                    key={e.content[0].value}
-                                    dangerouslySetInnerHTML={{ __html: e.content[0].value }}
-                                    className={`${isItalic && "isItalic"} text-left`} />
-                            );
-                        }),
-                        body: e.fields.body.content.map((e, i) => {
-                            switch (e.nodeType) {
-                                case "embedded-asset-block":
-                                    return <p key={e.data.target.fields.file.url}>
-                                        <img
-                                            className="articleImg"
-                                            src={e.data.target.fields.file.url} /></p>;
-                                    break;
-                                case "paragraph":
-                                    const isItalic = e.content[0].marks.length > 0 && e.content[0].marks[0].type === "italic";
-                                    return (
-                                        <p
-                                            key={e.content[0].value}
-                                            dangerouslySetInnerHTML={{ __html: e.content[0].value }}
-                                            className={`${isItalic && "isItalic"} text-left`} />
-                                    );
-                                    break;
-                            }
-                        })
+                        footer: documentToReactComponents(e.fields.footer, Options),
+                        body: documentToReactComponents(e.fields.body, Options)
                     }
                 })
                 .sort((a, b) => moment(a.date).format("YYYYMMDD") - moment(b.date).format("YYYYMMDD"))
@@ -151,7 +116,7 @@ export const RenderArticles = ({ articles }) => {
                 href={`/articles/${i + 1}`}
                 as={`/articles/${i + 1}`}>
                 <div
-                    key={i}
+                    key={title}
                     className="articleCard hoverZoom cursor m-2"
                     style={{
                         backgroundImage: `url(${thumb})`,

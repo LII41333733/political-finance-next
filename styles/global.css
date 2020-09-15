@@ -213,7 +213,7 @@ p, table, body {
     font-size: 1.2rem;
 }
 
-.footer a {
+.underline, .footer a {
     text-decoration: underline;
 }
 
@@ -228,6 +228,10 @@ p, table, body {
 
 .footerNav h5 {
     margin-bottom: 0px !important;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .dropcap {
