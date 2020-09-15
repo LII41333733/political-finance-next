@@ -6,7 +6,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 export const Bold = ({ children }) => <span className="bold">{children}</span>;
 export const Italic = ({ children }) => <span className="isItalic">{children}</span>;
 export const Underline = ({ children }) => <span className="underline">{children}</span>;
-export const Text = ({ children }) => <p className="text-left">{children}</p>;
+export const Text = ({ children }) => <p className="text-left mb-15">{children}</p>;
 export const Header_1 = ({ children }) => <h4 class="textColorPrimary toolsTitle schadow textCenter">{children}</h4>;
 export const Header_6 = ({ children }) => <p class="text-right">{children}</p>;
 export const Code = ({ children }) => <span dangerouslySetInnerHTML={{ __html: children }}></span>;
