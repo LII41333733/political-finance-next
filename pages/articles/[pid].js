@@ -68,7 +68,7 @@ export function Articles({ posts, id }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta property="og:title" content={currentPost.title} />
                 <meta property="og:description" content={currentPost.short} />
-                <meta property="og:image" content={currentPost.meta} />
+                <meta property="og:image" content={currentPost.meta.slice(2)} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="628" />
                 <meta property="og:url" content={`http://www.billpacello.com/articles/${id}`} />
