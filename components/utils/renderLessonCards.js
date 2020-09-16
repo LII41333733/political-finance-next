@@ -22,7 +22,6 @@ export default ({ setModalIndex }) => {
         description: ""
     }]);
 
-
     async function fetchEntries() {
         const entries = await ContentfulClient.getEntries();
         if (entries.items) return entries.items

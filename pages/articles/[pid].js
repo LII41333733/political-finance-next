@@ -29,92 +29,49 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const posts = await ContentfulClient.getEntries();
-    const posts_ = posts.items.filter(e => e.fields.metaImage !== undefined)
-    const int_ = Number(params.pid);
-    console.log(int_)
-    console.log()
+    const posts_ = posts.items
+        .filter(e => e.fields.metaImage !== undefined)
+        .sort((a, b) => a.fields.id - b.fields.id);
 
-    // console.log(posts[parseInt(params.pid)])
-    // debugger;
-    // if (posts.items) return posts.items
-    // console.log(`Error getting posts for ${contentType.name}.`)
     return {
-        props: posts_[int_ - 1].fields,
+        props: {
+            posts: posts_,
+            id: Number(params.pid)
+        }
     }
 }
 
 //525x150
-export function Articles(props) {
-
-
-    console.log(props)
-    const router = useRouter();
-    // const [posts, setPosts] = useState([{
-    //     thumb: "",
-    //     meta: "",
-    //     title: "",
-    //     short: "",
-    //     date: "",
-    //     footer: "",
-    //     body: []
-    // }]);
-
-    const [articleIndex, setIndex] = useState(null);
-
-    // async function fetchEntries() {
-    //     const entries = await ContentfulClient.getEntries();
-    //     if (entries.items) return entries.items
-    //     console.log(`Error getting Entries for ${contentType.name}.`)
-    // }
-
-    useEffect(() => {
-        async function getPosts() {
-            debugger;
-            const allPosts = await fetchEntries();
-            console.log(allPosts)
-            const mappedPosts = allPosts
-                .filter(e => e.fields.price === undefined)
-                .map(e => {
-                    console.log(e)
-                    // debugger;
-                    return {
-                        thumb: e.fields.articleThumbnail.fields.file.url,
-                        meta: e.fields.metaImage.fields.file.url,
-                        title: e.fields.title,
-                        short: e.fields.shortDescription,
-                        date: moment(e.fields.date).format("LL"),
-                        footer: documentToReactComponents(e.fields.footer, Options),
-                        body: documentToReactComponents(e.fields.body, Options)
-                    }
-                })
-                .sort((a, b) => moment(a.date).format("YYYYMMDD") - moment(b.date).format("YYYYMMDD"))
-            setPosts(mappedPosts);
+export function Articles({ posts, id }) {
+    const posts_ = posts.map(e => {
+        return {
+            thumb: e.fields.articleThumbnail.fields.file.url,
+            meta: e.fields.metaImage.fields.file.url,
+            title: e.fields.title,
+            short: e.fields.shortDescription,
+            date: moment(e.fields.date).format("LL"),
+            footer: documentToReactComponents(e.fields.footer, Options),
+            body: documentToReactComponents(e.fields.body, Options)
         }
-        getPosts();
-    }, [])
+    })
 
-    useEffect(() => {
-        setIndex(parseInt(router.query.pid) - 1)
-        setPosts(posts)
-    }, [router]);
+    const currentPost = posts_[id - 1];
 
     useEffect(() => {
         scrollToArticle();
     })
 
-
-    return (articleIndex !== null && posts.length > 1)
-        ? <>
+    return (
+        <>
             <Head>
-                <title>{posts[articleIndex].title}</title>
+                <title>{currentPost.title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta property="og:title" content={posts[articleIndex].title} />
-                <meta property="og:description" content={posts[articleIndex].short} />
-                <meta property="og:image" content={posts[articleIndex].meta.slice(2)} />
+                <meta property="og:title" content={currentPost.title} />
+                <meta property="og:description" content={currentPost.short} />
+                <meta property="og:image" content={currentPost.meta} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="628" />
-                <meta property="og:url" content={`http://www.billpacello.com/articles/${router.query.pid}`} />
-                {/* <meta property="og:url" content={`http://www.billpacello.com/articles/${router.query.pid}`} /> */}
+                <meta property="og:url" content={`http://www.billpacello.com/articles/${id}`} />
                 <meta property="og:type" content="website" />
             </Head>
             <JumbotronDefault title={"Articles"} />
@@ -123,7 +80,7 @@ export function Articles(props) {
                 style={{ paddingBottom: "50px" }}>
                 <Row style={{ justifyContent: "center" }}>
                     <RenderArticles
-                        articles={posts} />
+                        articles={posts_} />
                 </Row>
                 <hr className="hr0" />
                 <hr className="hr1" />
@@ -134,11 +91,11 @@ export function Articles(props) {
                 </div>
                 <Row>
                     <DisplayArticle
-                        article={posts[articleIndex]} />
+                        article={currentPost} />
                 </Row>
             </Container>
         </>
-        : < div></div>
+    )
 }
 
 export default withRouter(Articles);
@@ -169,6 +126,7 @@ export const RenderArticles = ({ articles }) => {
 }
 
 export const DisplayArticle = ({ article }) => {
+    console.log(article)
     const { title, date, body, footer } = article;
 
     return (
