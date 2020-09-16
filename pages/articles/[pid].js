@@ -55,6 +55,8 @@ export function Articles({ posts, id }) {
         }
     })
 
+    console.log(posts_)
+
     const currentPost = posts_[id - 1];
 
     useEffect(() => {
@@ -126,7 +128,6 @@ export const RenderArticles = ({ articles }) => {
 }
 
 export const DisplayArticle = ({ article }) => {
-    console.log(article)
     const { title, date, body, footer } = article;
 
     return (
