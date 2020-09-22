@@ -13,12 +13,14 @@ export default [{
     caption: "Transactional Analysis can be studied in-depth, but for purposes here it’s a model to remind us of effective communications and transactions. Effective teaching, if possible, should be done via the “Adult to Adult” channel.",
     slug: "tam",
     src: "images/tools/tam-thumb.png"
-}, {
-    title: "Bloom's Taxonomy",
-    caption: "Bloom's Taxonomy is usually presented as a triangle used to classify learning objectives into levels of complexity and specificity. It is named after Benjamin Bloom, who chaired the committee of educators that devised the taxonomy.",
-    slug: "blooms",
-    src: "images/tools/blooms-thumb.png"
-}, {
+},
+// {
+// title: "Bloom's Taxonomy",
+// caption: "Bloom's Taxonomy is usually presented as a triangle used to classify learning objectives into levels of complexity and specificity. It is named after Benjamin Bloom, who chaired the committee of educators that devised the taxonomy.",
+// slug: "blooms",
+// src: "images/tools/blooms-thumb.png"
+// },
+{
     title: "Tips for Helping You Select a Financial Advisor",
     caption: "Simple decision-making model to help you select a financial professional. There are certainly more factors, but these will get you started.",
     slug: "advisor",
