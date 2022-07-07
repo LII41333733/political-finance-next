@@ -14,7 +14,7 @@
     "contentful": "^7.14.4",
     "gray-matter": "^4.0.2",
     "isomorphic-unfetch": "^3.0.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-bootstrap": "^1.0.1",
