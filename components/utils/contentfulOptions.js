@@ -13,9 +13,18 @@ export const Text = ({ children }) => (
   <p className="text-left mb-15">{children}</p>
 );
 export const Header_1 = ({ children }) => (
-  <h4 class="textColorPrimary toolsTitle schadow textCenter">{children}</h4>
+  <h4 className="textColorPrimary toolsTitle schadow textCenter pt-4 mb-1">
+    {children}
+  </h4>
 );
-export const Header_6 = ({ children }) => <p class="text-right">{children}</p>;
+export const Header_2 = ({ children }) => (
+  <h5 className="textColorPrimary toolsTitle schadow textCenter mt-2 mb-1">
+    {children}
+  </h5>
+);
+export const Header_6 = ({ children }) => (
+  <p className="text-right">{children}</p>
+);
 export const Code = ({ children }) => (
   <span dangerouslySetInnerHTML={{ __html: children }}></span>
 );
@@ -30,6 +39,7 @@ export const Options = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
     [BLOCKS.HEADING_1]: (node, children) => <Header_1>{children}</Header_1>,
+    [BLOCKS.HEADING_2]: (node, children) => <Header_2>{children}</Header_2>,
     [BLOCKS.HEADING_6]: (node, children) => <Header_6>{children}</Header_6>,
     [BLOCKS.EMBEDDED_ASSET]: (e) => (
       <p>
