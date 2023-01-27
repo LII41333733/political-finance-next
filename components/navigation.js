@@ -23,7 +23,7 @@ export default () => {
           <span className={"pt-1 nav-link hide-link"}>Tools</span>
         </Link>
 
-        <Link href={`/articles/${articles.length}`}>
+        <Link href={`/articles`}>
           <span className={"pt-1 nav-link"}>Articles</span>
         </Link>
 

@@ -26,6 +26,7 @@ export default ({ setModalIndex }) => {
 
   async function fetchEntries() {
     const entries = await ContentfulClient.getEntries();
+    console.log(entries);
     if (entries.items) return entries.items;
     console.log(`Error getting Entries for ${contentType.name}.`);
   }
