@@ -19,7 +19,6 @@ import {
 
 export async function getStaticPaths() {
   const posts = await ContentfulClient.getEntries();
-
   // const paths = posts.items
   //     .map((post) => ({
   //         params: { id: post.id },
@@ -35,11 +34,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const posts = await ContentfulClient.getEntries();
+  console.log(posts);
+
   const posts_ = posts.items
     .filter((e) => e.fields.metaImage !== undefined)
     .sort((a, b) => a.fields.id - b.fields.id);
-
-  console.log(posts_);
 
   return {
     props: {
@@ -63,11 +62,9 @@ export function Articles({ posts, id }) {
     };
   });
 
-  console.log(posts_);
-
   const currentPost = posts_[id - 1];
 
-  console.log(currentPost);
+  console.log(`https://${currentPost.meta.slice(2)}`);
 
   useEffect(() => {
     scrollToArticle();
@@ -80,7 +77,10 @@ export function Articles({ posts, id }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content={currentPost.title} />
         <meta property="og:description" content={currentPost.short} />
-        <meta property="og:image" content={currentPost.meta.slice(2)} />
+        <meta
+          property="og:image"
+          content={`https://${currentPost.meta.slice(2)}`}
+        />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="628" />
         <meta
