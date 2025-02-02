@@ -20,6 +20,7 @@ body {
   padding: 0;
   position: absolute;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .galleryCard {
